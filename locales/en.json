@@ -1,0 +1,41 @@
+{
+  "title": "WiserGym",
+  "Hero": {
+    "navigation": {
+      "Home": "Home",
+      "Features": "Features",
+      "Lifestyle Transformation": "Lifestyle Transformation",
+      "Benefits": "Benefits",
+      "Testimonials": "Testimonials",
+      "Pricing": "Pricing",
+      "Restore Btn": "Restore Your WiserGym Now"
+    },
+    "content": {
+      "mainText": {
+        "line1": "The Smartest Gym",
+        "line2": "You'll Ever Own",
+        "line3": "Right On",
+        "line4": "Your Wall"
+      },
+      "subText": "Bring The Gym Home With +220 Exercises, Smart Training & Complete Privacy"
+    }
+  },
+  "BenefitsOverview": {
+    "headline": "Packed with innovation",
+    "list": {
+      "benefit1": "Digital Weight & Smart resistance adjustment up to 100 kg",
+      "benefit2": "Smart Training",
+      "benefit3": "All-in-one Training Machine",
+      "benefit4": "Quiet & Safe",
+      "benefit5": "Arabic & English Interface",
+      "benefit6": "2 Years Warranty",
+      "benefit7": "Personalized workout programs",
+      "benefit8": "App-connected tracking",
+      "benefit9": "Auto-adjusted resistance with memory recall",
+      "benefit10": "Bluetooth-enabled smart accessories",
+      "benefit11": "Full-screen guided workouts with expert-level instruction and real-time adjustments",
+      "benefit12": "6 Dynamic Resistance Training Modes",
+      "benefit13": "Ultra-high strength polyethylene cable, durable and wear-resistant"
+    }
+  }
+}
