@@ -15,7 +15,6 @@ export default function BenefitsOverview() {
         priority
       />
 
-      {/* Content Container */}
       {/* red overlay */}
       <div className="container max-w-9xl mx-auto px-12 py-6 h-screen bg-[#CF0002] opacity-85 absolute inset-0 mix-blend-color -z-10"></div>
 

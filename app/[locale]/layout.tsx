@@ -35,7 +35,7 @@ export default async function LocaleLayout({
   const direction = locale === "ar" ? "rtl" : "ltr";
 
   return (
-    <html lang={locale} dir={direction}>
+    <html lang={locale} dir={direction} className="scroll-smooth">
       <body className={`${roboto.variable} font-sans antialiased`}>
         {/* 4. Wrap children with the provider */}
         <NextIntlClientProvider messages={messages}>
