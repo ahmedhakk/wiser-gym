@@ -38,7 +38,7 @@ export default function LifestyleTransformationList({
         <div key={BenefitItem.id} className="flex items-center gap-3 md:gap-4">
           <Image
             src={BenefitItem.icon}
-            alt="icon"
+            alt={BenefitItem.text}
             width={64}
             height={64}
             className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 flex-shrink-0"

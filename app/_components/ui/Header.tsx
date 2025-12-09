@@ -12,12 +12,16 @@ export default function Header() {
 
   const navLinks = [
     { name: t("navigation.Home"), href: "#" },
-    { name: t("navigation.Features"), href: "#benefits-overview" },
+    { name: t("navigation.Features"), href: "#features-overview" },
     {
       name: t("navigation.Lifestyle Transformation"),
-      href: "#transformation-section",
+      href: "#lifestyle-transformation",
     },
-    { name: t("navigation.Benefits"), href: "#", highlight: true },
+    {
+      name: t("navigation.Benefits"),
+      href: "#benefits-and-payments",
+      highlight: true,
+    },
     { name: t("navigation.Testimonials"), href: "#" },
     { name: t("navigation.Pricing"), href: "#" },
   ];

@@ -20,22 +20,22 @@
       "subText": "Bring The Gym Home With +220 Exercises, Smart Training & Complete Privacy"
     }
   },
-  "BenefitsOverview": {
+  "FeaturesOverview": {
     "headline": "Packed with innovation",
     "list": {
-      "benefit1": "Digital Weight & Smart resistance adjustment up to 100 kg",
-      "benefit2": "Smart Training",
-      "benefit3": "All-in-one Training Machine",
-      "benefit4": "Quiet & Safe",
-      "benefit5": "Arabic & English Interface",
-      "benefit6": "2 Years Warranty",
-      "benefit7": "Personalized workout programs",
-      "benefit8": "App-connected tracking",
-      "benefit9": "Auto-adjusted resistance with memory recall",
-      "benefit10": "Bluetooth-enabled smart accessories",
-      "benefit11": "Full-screen guided workouts with expert-level instruction and real-time adjustments",
-      "benefit12": "6 Dynamic Resistance Training Modes",
-      "benefit13": "Ultra-high strength polyethylene cable, durable and wear-resistant"
+      "feature1": "Digital Weight & Smart resistance adjustment up to 100 kg",
+      "feature2": "Smart Training",
+      "feature3": "All-in-one Training Machine",
+      "feature4": "Quiet & Safe",
+      "feature5": "Arabic & English Interface",
+      "feature6": "2 Years Warranty",
+      "feature7": "Personalized workout programs",
+      "feature8": "App-connected tracking",
+      "feature9": "Auto-adjusted resistance with memory recall",
+      "feature10": "Bluetooth-enabled smart accessories",
+      "feature11": "Full-screen guided workouts with expert-level instruction and real-time adjustments",
+      "feature12": "6 Dynamic Resistance Training Modes",
+      "feature13": "Ultra-high strength polyethylene cable, durable and wear-resistant"
     }
   },
   "LifestyleTransformation": {
@@ -45,6 +45,54 @@
       "advantage-2": "Get consistent results",
       "advantage-3": "Build discipline, confidence, and long-term health",
       "advantage-4": "Train privately anytime, with zero intimidation"
+    }
+  },
+  "GymPainPoints": {
+    "content": {
+      "headline": "Tired Of Wasting Time On Gym Commutes?",
+      "list": {
+        "painPoint1": "Crowded Gyms",
+        "painPoint2": "Traffic and wasted hours",
+        "painPoint3": "Expensive personal trainers",
+        "painPoint4": "Inconsistent results"
+      }
+    }
+  },
+  "KeyFeatures": {
+    "headline": "Backed By Key Features:",
+    "sub-headline": {
+      "number": "+220",
+      "text": "Full-body Exercises"
+    },
+    "list": {
+      "feature1": "Virtual personal trainer with adaptive programming",
+      "feature2": "Wall-mounted, space-saving design.",
+      "feature3": "Track your fitness journey with personalized insights and visual progress updates"
+    }
+  },
+  "BenefitsAndPayments": {
+    "list": {
+      "strength": "Strength & Fitness",
+      "family": "Family Friendly",
+      "privacy": "Privacy & Discreet",
+      "time": "Time-Saving",
+      "directions": "Space-Saving Design",
+      "smart": "Smart Coaching"
+    },
+    "checkout now": "No Time for the Gym? [Checkout Now – SAR 14,999]"
+  },
+  "ProductSpotlight": {
+    "headline1": "imagine your fitness",
+    "headline2": "routine with",
+    "subtext": "Train Smarter, Save Time, And Finally Stay Consistent",
+    "subtextBold": "All From The Privacy Of Your Home",
+    "cta": "Start Your Transformation Today"
+  },
+  "PurchaseDetails": {
+    "list": {
+      "purchase1": "Eliminate gym anxiety and take full control of your training",
+      "purchase2": "Turn your wall into a 24/7 private personal training studio",
+      "purchase3": "Build healthy habits with structured routines and visible progress"
     }
   }
 }
