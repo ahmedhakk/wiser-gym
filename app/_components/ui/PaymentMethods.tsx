@@ -1,7 +1,13 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 
-const Methods = [
+type PaymentMethod = {
+  id: number;
+  src: string;
+  alt: string;
+};
+
+const Methods: PaymentMethod[] = [
   {
     id: 1,
     src: "/payment-methods/tabby.png",

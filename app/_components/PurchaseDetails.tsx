@@ -1,11 +1,21 @@
+"use client";
 import Image from "next/image";
 import PurchaseDetailsContent from "@/ui/PurchaseDetailsContent";
+import { useParams } from "next/navigation";
 
 export default function PurchaseDetails() {
+  const params = useParams();
+  const locale = params.locale as string;
+  const isRTL = locale === "ar";
+
   return (
     <section className="w-full h-screen relative">
       {/* Background Images */}
-      <div className="flex absolute inset-0 -z-20">
+      <div
+        className={`flex absolute inset-0 -z-20 ${
+          isRTL ? "flex-row-reverse" : ""
+        }`}
+      >
         {/* Left Image */}
         <Image
           src="/purchase.png"

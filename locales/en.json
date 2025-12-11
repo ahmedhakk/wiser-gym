@@ -94,5 +94,118 @@
       "purchase2": "Turn your wall into a 24/7 private personal training studio",
       "purchase3": "Build healthy habits with structured routines and visible progress"
     }
+  },
+  "WhatYouGet": {
+    "headline": "What you’ll get with WiserGym",
+    "list": {
+      "item1": "Personalized Guided Routine",
+      "item2": "All-in-one training system",
+      "item3": "Family-friendly setup",
+      "item4": "Real-time progress analytics",
+      "item5": "24/7 access on your schedule",
+      "item6": "2 Years Warranty",
+      "item7": "Safe, low-impact training",
+      "item8": "Private and judgment-free sessions"
+    }
+  },
+  "ProductOverview": {
+    "title": "WiserGym, The Ultimate Smart Home Gym Machine",
+    "price": "14,999",
+    "about": "Experience expert-led workouts, consistent progress, and total convenience—without ever leaving home.",
+    "features": {
+      "headline": "Concise Features",
+      "list": {
+        "feature1": "2 Years Warranty",
+        "feature2": "Full Gym",
+        "feature3": "Basic Smart Accessories Bundle",
+        "feature4": "Multi-Profile Support",
+        "feature5": "Progress Monitoring Dashboard",
+        "feature6": "Space-saving wall unit with full gym capacity."
+      }
+    },
+    "buyNow": "Buy Now – Free Delivery In Riyadh"
+  },
+  "Reviews": {
+    "headline": "What WiserGym Owners Are Saying",
+    "results": {
+      "heading": "Hundreds of users are seeing results, saving time, and falling in love with fitness again.",
+      "highlights": [
+        "Personalized Scheduling",
+        "Expert Onboarding",
+        "Goal-Driven Performance Feedback"
+      ],
+      "cta": "Join 100s of Satisfied Customers – Get Yours Today"
+    }
+  },
+  "EarlyAccessBanner": {
+    "leftSidePerks": {
+      "headline": "Early Access Offer for Riyadh Residents",
+      "perk1": "Free installation",
+      "perk2": "Bonus onboarding call",
+      "perk3": "Limited inventory for the first shipment"
+    },
+    "rightSidePerks": {
+      "headline": "Launch units are nearly gone lock in your transformation before it's too late.",
+      "perk1": "Fast delivery in Riyadh",
+      "perk2": "Local setup & support"
+    },
+    "cta": "Secure Your WiserGym – Limited Units Available"
+  },
+  "PricingBreakdown": {
+    "leftColumn": {
+      "headline": "Easy, Transparent Pricing",
+      "ownItToday": "Own it today for",
+      "coffeePerDay": "as little as one coffee per day",
+      "price": "14,999",
+      "benefits": {
+        "benefit1": "Encrypted Payment",
+        "benefit2": "Free Delivery",
+        "benefit3": "Expert Installation"
+      },
+      "cta": "Get Stronger From Home While Raising Kids"
+    },
+    "rightColumn": {
+      "headline": "That's approximately",
+      "pricePerDay": "20",
+      "perDay": "/Day",
+      "spreadOver": "Spread Over 2 Years.",
+      "description": "The most advanced gym at a fraction of what you'd spend on memberships and trainers.",
+      "cta": "Pay Later Options Available"
+    }
+  },
+  "CTASection": {
+    "mainText": "Train the Wiser Way Smarter, Stronger, Home-Based",
+    "subText": "Designed to fit your home, your goals, and your time. No gym needed, no distractions, consistent results. Covered by a 2-year manufacturer warranty for peace of mind.",
+    "buttonText": "Buy Now & Bring the Gym To Your Home"
+  },
+  "Footer": {
+    "description": "The smartest home gym solution for busy professionals and families.",
+    "companyLinks": {
+      "title": "Company",
+      "links": [
+        "Homepage",
+        "Our Story",
+        "CEO Message",
+        "Careers",
+        "Press",
+        "Blog",
+        "Shop"
+      ]
+    },
+    "supportLinks": {
+      "title": "Support",
+      "links": [
+        "FAQ",
+        "Contact Us",
+        "Installation Instructions",
+        "Become a Distributor",
+        "Affiliate"
+      ]
+    },
+    "legalLinks": {
+      "title": "Legal",
+      "links": ["Terms", "Privacy Policy", "Warranty"]
+    },
+    "copyright": "© 2026 WiserGym. All rights reserved."
   }
 }
