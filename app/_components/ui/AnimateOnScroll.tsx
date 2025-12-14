@@ -6,10 +6,10 @@ import { useInView } from "@/lib/useInView";
 type Direction = "up" | "down" | "left" | "right";
 
 const directionClasses: Record<Direction, string> = {
-  up: "translate-y-8",
-  down: "-translate-y-8",
-  left: "translate-x-8",
-  right: "-translate-x-8",
+  up: "translate-y-4 md:translate-y-8",
+  down: "-translate-y-4 md:-translate-y-8",
+  left: "translate-x-2 sm:translate-x-4 md:translate-x-8",
+  right: "-translate-x-2 sm:-translate-x-4 md:-translate-x-8",
 };
 
 type Props = {

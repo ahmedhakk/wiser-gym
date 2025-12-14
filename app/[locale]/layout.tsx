@@ -36,7 +36,9 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} dir={direction} className="scroll-smooth">
-      <body className={`${roboto.variable} font-sans antialiased`}>
+      <body
+        className={`${roboto.variable} font-sans antialiased overflow-x-hidden`}
+      >
         {/* 4. Wrap children with the provider */}
         <NextIntlClientProvider messages={messages}>
           {children}
