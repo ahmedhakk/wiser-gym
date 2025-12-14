@@ -1,6 +1,7 @@
 import FeatureItem from "@/app/_components/ui/FeatureItem";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import AnimateOnScroll from "@/ui/AnimateOnScroll";
 
 export default function FeaturesContent() {
   const t = useTranslations();
@@ -31,11 +32,13 @@ export default function FeaturesContent() {
       </h2>
 
       <div className="flex flex-col md:flex-row justify-between gap-2">
-        <div>
-          {featuresListLeft.map((feature, index) => (
-            <FeatureItem key={index} text={feature.text} />
-          ))}
-        </div>
+        <AnimateOnScroll direction="right" delayMs={350}>
+          <div>
+            {featuresListLeft.map((feature, index) => (
+              <FeatureItem key={index} text={feature.text} />
+            ))}
+          </div>
+        </AnimateOnScroll>
 
         {/* Image */}
         <Image
@@ -45,11 +48,13 @@ export default function FeaturesContent() {
           height={800}
           className="hidden lg:block w-auto h-auto max-w-full object-contain"
         />
-        <div>
-          {featuresListRight.map((feature, index) => (
-            <FeatureItem key={index} text={feature.text} />
-          ))}
-        </div>
+        <AnimateOnScroll direction="left" delayMs={350}>
+          <div>
+            {featuresListRight.map((feature, index) => (
+              <FeatureItem key={index} text={feature.text} />
+            ))}
+          </div>
+        </AnimateOnScroll>
       </div>
     </div>
   );

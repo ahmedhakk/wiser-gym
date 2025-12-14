@@ -9,8 +9,6 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "@gsap/react": "^2.1.2",
-    "gsap": "^3.13.0",
     "next": "^16.0.8",
     "next-intl": "^4.5.7",
     "react": "19.2.0",

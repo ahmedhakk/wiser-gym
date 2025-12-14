@@ -1,5 +1,6 @@
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import AnimateOnScroll from "@/ui/AnimateOnScroll";
 
 export default function WhatYouGetContent() {
   const t = useTranslations("WhatYouGet");
@@ -22,22 +23,28 @@ export default function WhatYouGetContent() {
 
       <div className="p-12 grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-x-36 sm:gap-y-12 lg:gap-y-16">
         {featuresList.map((feature) => (
-          <div
+          <AnimateOnScroll
             key={feature.id}
-            className="flex items-center gap-3 md:gap-6 bg-primary ltr:rounded-l-full rtl:rounded-r-full"
+            direction="left"
+            delayMs={feature.id * 100}
           >
-            <Image
-              src={feature.iconSrc}
-              alt={feature.text}
-              width={64}
-              height={64}
-              className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 flex-shrink-0"
-            />
+            <div
+              key={feature.id}
+              className="flex items-center gap-3 md:gap-6 bg-primary ltr:rounded-l-full rtl:rounded-r-full"
+            >
+              <Image
+                src={feature.iconSrc}
+                alt={feature.text}
+                width={64}
+                height={64}
+                className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 flex-shrink-0"
+              />
 
-            <p className="text-foreground text-xl lg:text-2xl xl:text-3xl">
-              {feature.text}
-            </p>
-          </div>
+              <p className="text-foreground text-xl lg:text-2xl xl:text-3xl">
+                {feature.text}
+              </p>
+            </div>
+          </AnimateOnScroll>
         ))}
       </div>
     </div>

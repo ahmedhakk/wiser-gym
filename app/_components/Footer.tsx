@@ -1,6 +1,7 @@
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import FooterLinks from "@/ui/FooterList";
+import AnimateOnScroll from "@/ui/AnimateOnScroll";
 
 const socialIconsSrc = [
   { name: "facebook", src: "/icons/social-footer/facebook.svg" },
@@ -58,56 +59,58 @@ const Methods: PaymentMethod[] = [
 export default function Footer() {
   const t = useTranslations();
   return (
-    <footer className="w-full h-[860px] md:h-[436px] px-8 pt-16 bg-white">
-      <div className="bg-[#F9F9F9] w-full h-full rounded-t-[80px] border border-[#A6A8AB]">
-        <div className="container max-w-9xl mx-auto px-4 pt-12 text-black">
-          {/* upper footer */}
-          <div className="flex flex-col items-center gap-8 md:flex-row md:items-start md:justify-between">
-            {/* left */}
-            <div className="text-center ltr:md:text-left rtl:md:text-right">
-              <h3 className="text-lg font-semibold mb-2 md:mb-4">
-                {t("title")}
-              </h3>
-              <p className="text-xs md:text-sm max-w-72">
-                {t("Footer.description")}
+    <AnimateOnScroll direction="up">
+      <footer className="w-full h-[860px] md:h-[436px] px-8 pt-16 bg-white">
+        <div className="bg-[#F9F9F9] w-full h-full rounded-t-[80px] border border-[#A6A8AB]">
+          <div className="container max-w-9xl mx-auto px-4 pt-12 text-black">
+            {/* upper footer */}
+            <div className="flex flex-col items-center gap-8 md:flex-row md:items-start md:justify-between">
+              {/* left */}
+              <div className="text-center ltr:md:text-left rtl:md:text-right">
+                <h3 className="text-lg font-semibold mb-2 md:mb-4">
+                  {t("title")}
+                </h3>
+                <p className="text-xs md:text-sm max-w-72">
+                  {t("Footer.description")}
+                </p>
+                <div className="flex justify-center md:justify-start gap-4 mt-6 cursor-pointer">
+                  {socialIconsSrc.map((icon) => (
+                    <Image
+                      key={icon.name}
+                      src={icon.src}
+                      alt={icon.name}
+                      width={24}
+                      height={24}
+                      className="w-4 h-4"
+                    />
+                  ))}
+                </div>
+              </div>
+              {/* right */}
+              <FooterLinks />
+            </div>
+
+            {/* lower footer */}
+            <div className="flex flex-col gap-4 sm:flex-row sm:gap-0 sm:justify-between mt-6 py-4 border-t border-[#929598]">
+              <p className="text-[#A6A8AB] text-xs sm:text-sm text-center sm:text-left">
+                {t("Footer.copyright")}
               </p>
-              <div className="flex justify-center md:justify-start gap-4 mt-6 cursor-pointer">
-                {socialIconsSrc.map((icon) => (
+              <div className="flex flex-wrap justify-center sm:justify-end gap-2 sm:gap-4">
+                {Methods.map((method) => (
                   <Image
-                    key={icon.name}
-                    src={icon.src}
-                    alt={icon.name}
-                    width={24}
+                    src={method.src}
+                    alt={method.alt}
+                    key={method.id}
+                    width={64}
                     height={24}
-                    className="w-4 h-4"
+                    className="w-[48px] h-[18px] sm:w-[56px] sm:h-[21px] lg:w-[64px] lg:h-[24px] aspect-auto"
                   />
                 ))}
               </div>
             </div>
-            {/* right */}
-            <FooterLinks />
-          </div>
-
-          {/* lower footer */}
-          <div className="flex flex-col gap-4 sm:flex-row sm:gap-0 sm:justify-between mt-6 py-4 border-t border-[#929598]">
-            <p className="text-[#A6A8AB] text-xs sm:text-sm text-center sm:text-left">
-              {t("Footer.copyright")}
-            </p>
-            <div className="flex flex-wrap justify-center sm:justify-end gap-2 sm:gap-4">
-              {Methods.map((method) => (
-                <Image
-                  src={method.src}
-                  alt={method.alt}
-                  key={method.id}
-                  width={64}
-                  height={24}
-                  className="w-[48px] h-[18px] sm:w-[56px] sm:h-[21px] lg:w-[64px] lg:h-[24px] aspect-auto"
-                />
-              ))}
-            </div>
           </div>
         </div>
-      </div>
-    </footer>
+      </footer>
+    </AnimateOnScroll>
   );
 }

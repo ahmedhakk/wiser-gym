@@ -1,5 +1,6 @@
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import AnimateOnScroll from "./AnimateOnScroll";
 
 export default function PurchaseDetailsContent() {
   const t = useTranslations("PurchaseDetails");
@@ -38,12 +39,11 @@ export default function PurchaseDetailsContent() {
       </div>
       <div className="hidden md:flex flex-col items-end justify-between absolute top-0 right-0 h-full me-32 p-12">
         {purchaseList.map((purchase) => (
-          <p
-            key={purchase.id}
-            className="md:text-2xl lg:text-3xl max-w-[400px] my-16 pt-8 border-t-4 border-white capitalize"
-          >
-            {purchase.text}
-          </p>
+          <AnimateOnScroll key={purchase.id} direction="left" delayMs={300}>
+            <p className="md:text-2xl lg:text-3xl max-w-[400px] my-16 pt-8 border-t-4 border-white capitalize">
+              {purchase.text}
+            </p>
+          </AnimateOnScroll>
         ))}
       </div>
 

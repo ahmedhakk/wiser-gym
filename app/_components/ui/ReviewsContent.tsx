@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useTranslations, useLocale } from "next-intl";
 import ReviewCard from "@/ui/ReviewCard";
 import ReviewsResults from "@/ui/ReviewsResults";
+import AnimateOnScroll from "./AnimateOnScroll";
 
 type Review = {
   id: number;
@@ -114,23 +115,25 @@ export default function ReviewsContent() {
             <div
               key={`${review.id}-${currentIndex}-${idx}`}
               className={`
-                w-full flex-shrink-0 flex
-                sm:w-[calc(50%-12px)] 
-                lg:w-[calc(33.333%-16px)]
-                transition-all duration-500 ease-in-out
-                ${
-                  idx === 0
-                    ? "opacity-100 translate-x-0"
-                    : "opacity-100 translate-x-0"
-                }
-              `}
+                  w-full flex-shrink-0 flex
+                  sm:w-[calc(50%-12px)] 
+                  lg:w-[calc(33.333%-16px)]
+                  transition-all duration-500 ease-in-out
+                  ${
+                    idx === 0
+                      ? "opacity-100 translate-x-0"
+                      : "opacity-100 translate-x-0"
+                  }
+                `}
             >
-              <ReviewCard
-                name={review.name}
-                message={review.message}
-                avatarSrc={review.avatarSrc}
-                rating={review.rating}
-              />
+              <AnimateOnScroll direction="left">
+                <ReviewCard
+                  name={review.name}
+                  message={review.message}
+                  avatarSrc={review.avatarSrc}
+                  rating={review.rating}
+                />
+              </AnimateOnScroll>
             </div>
           ))}
         </div>

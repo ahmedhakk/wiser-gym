@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import LifestyleTransformationList from "@/ui/LifestyleTransformationList";
+import AnimateOnScroll from "@/ui/AnimateOnScroll";
 
 export default function LifestyleTransformationContent() {
   const t = useTranslations();
@@ -21,12 +22,16 @@ export default function LifestyleTransformationContent() {
 
       {/* Text Content */}
       <div className="relative z-10 flex flex-col gap-16 lg:gap-8 md:flex-row md:justify-center md:items-center h-full px-4 md:px-8">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mt-24 md:mt-0 md:flex-1 leading-tight">
-          {t("LifestyleTransformation.headline") + " "} <br />
-          {t("title")}
-        </h2>
+        <AnimateOnScroll direction="right" className="md:flex-1" delayMs={350}>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mt-24 md:mt-0 leading-tight">
+            {t("LifestyleTransformation.headline") + " "} <br />
+            {t("title")}
+          </h2>
+        </AnimateOnScroll>
 
-        <LifestyleTransformationList className="md:flex-1" />
+        <AnimateOnScroll direction="left" className="md:flex-1" delayMs={350}>
+          <LifestyleTransformationList />
+        </AnimateOnScroll>
       </div>
     </div>
   );
