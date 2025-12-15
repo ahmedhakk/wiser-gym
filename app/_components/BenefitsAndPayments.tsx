@@ -3,7 +3,10 @@ import BenefitsAndPaymentsContent from "@/ui/BenefitsAndPaymentsContent";
 
 export default function BenefitsAndPayments() {
   return (
-    <section id="benefits-and-payments" className="relative w-full h-screen">
+    <section
+      id="benefits-and-payments"
+      className="relative w-full py-16 md:py-24"
+    >
       <Image
         src="/bg-benefits-and-payments.png"
         alt="Benefits and Payments main background"

@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     "Wiser Gym | The Ultimate Smart Home Gym For Full-Body Results At Home",
   description:
     "Get a complete smart gym on your wall. WiserGym offers personal training real-time tracking & 250+ exercises; all in your home. Free delivary & 2-year warranty",
+  viewport: "width=device-width, initial-scale=1",
 };
 
 export default async function LocaleLayout({

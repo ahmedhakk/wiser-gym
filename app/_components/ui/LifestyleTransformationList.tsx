@@ -32,7 +32,7 @@ export default function LifestyleTransformationList({
 
   return (
     <div
-      className={`flex flex-col gap-12 md:gap-16 text-foreground ${className}`}
+      className={`flex flex-col gap-8 sm:gap-10 lg:gap-12 text-foreground ${className}`}
     >
       {transformationList.map((BenefitItem) => (
         <div key={BenefitItem.id} className="flex items-center gap-3 md:gap-4">
@@ -41,10 +41,11 @@ export default function LifestyleTransformationList({
             alt={BenefitItem.text}
             width={64}
             height={64}
-            className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 flex-shrink-0"
+            className="w-4 h-4 sm:w-6 sm:h-6 md:w-8 md:h-8 flex-shrink-0"
           />
 
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl">
+          {/* <p className="text-sm sm:text-base md:text-lg lg:text-xl"> */}
+          <p className="text-sm sm:text-base lg:text-md leading-[1.6]">
             {BenefitItem.text}
           </p>
         </div>

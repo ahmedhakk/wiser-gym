@@ -17,7 +17,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-black/60 -z-10" />
 
       {/* Content Container */}
-      <div className="container max-w-9xl mx-auto px-12 py-6 h-full flex flex-col">
+      <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-10 py-6 h-full flex flex-col">
         <Header />
         <HeroContent />
       </div>

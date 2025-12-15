@@ -35,7 +35,7 @@ export default function BenefitsList({ className }: { className?: string }) {
 
   return (
     <div
-      className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 mb-16 transition-all duration-300 ${className}`}
+      className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-16 transition-all duration-300 ${className}`}
     >
       {benefitsList.map((benefit) => (
         <div key={benefit.id} className="flex items-center gap-3 md:gap-4">
@@ -44,10 +44,10 @@ export default function BenefitsList({ className }: { className?: string }) {
             alt={benefit.text}
             width={64}
             height={64}
-            className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 flex-shrink-0"
+            className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 flex-shrink-0"
           />
 
-          <p className="text-foreground text-xl md:text-2xl lg:text-3xl">
+          <p className="text-foreground text-base sm:text-lg lg:text-xl leading-[1.4]">
             {benefit.text}
           </p>
         </div>

@@ -4,9 +4,9 @@ export default function KeyFeatures() {
   return (
     <section
       id="KeyFeatures"
-      className="relative w-full min-h-screen lg:bg-[#bcbcbc] overflow-hidden"
+      className="relative w-full lg:bg-[#bcbcbc] overflow-hidden"
     >
-      <div className="lg:hidden absolute top-0 left-0 w-full h-screen lg:h-[65%] bg-[#E60017] z-0"></div>
+      <div className="lg:hidden absolute inset-0 bg-[#E60017] z-0"></div>
 
       <div
         className="hidden lg:block absolute inset-0 bg-[#E60017] z-0"

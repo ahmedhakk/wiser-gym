@@ -61,7 +61,7 @@ export default function Header() {
               className={`text-xs xl:text-sm font-bold text-white transition hover:text-gray-300 whitespace-nowrap
                 ${
                   link.highlight
-                    ? "bg-gradient-to-b from-primary to-primary-800 px-3 py-1.5"
+                    ? "transition-all duration-300 hover:bg-gradient-to-b hover:from-primary hover:to-primary-800 px-3 py-1.5"
                     : ""
                 }`}
             >
@@ -193,7 +193,7 @@ export default function Header() {
 
       {/* Mobile Menu Overlay */}
       <div
-        className={`fixed top-0 left-0 w-full h-screen z-40 bg-black/95 backdrop-blur-sm flex flex-col items-center justify-center space-y-6 text-xl sm:text-2xl font-bold text-white transition-all duration-300 ease-in-out lg:hidden
+        className={`fixed top-0 left-0 w-full h-screen z-40 bg-black/95 backdrop-blur-sm flex flex-col items-center justify-center space-y-5 text-lg sm:text-xl font-bold text-white transition-all duration-300 ease-in-out lg:hidden
         ${isOpen ? "opacity-100 visible" : "opacity-0 invisible"}`}
       >
         {navLinks.map((link, index) => (
@@ -308,7 +308,7 @@ export default function Header() {
         <Link
           href="#"
           onClick={() => setIsOpen(false)}
-          className={`bg-primary hover:bg-primary-hover px-8 py-3 rounded text-white transition transform mt-4
+          className={`bg-primary hover:bg-primary-hover px-6 sm:px-8 py-2.5 sm:py-3 rounded text-white transition transform mt-4
           ${isOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`}
           style={{
             transitionDelay: isOpen ? `${(navLinks.length + 1) * 50}ms` : "0ms",

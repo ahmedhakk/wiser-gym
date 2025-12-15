@@ -6,25 +6,25 @@ export default function KeyFeaturesContent() {
   const t = useTranslations("KeyFeatures");
 
   return (
-    <div className="container max-w-9xl mx-auto px-4 sm:px-6 md:px-12 py-6 pb-12 min-h-screen lg:h-screen relative">
-      <div className="flex flex-col lg:flex-row mt-20 lg:mt-0 h-full lg:items-center">
+    <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-10 py-12 lg:py-16 relative">
+      <div className="flex flex-col lg:flex-row gap-12 lg:gap-10 lg:items-center">
         <div className="w-full lg:w-[65%] text-white space-y-8 pr-0 lg:pr-12 relative z-10">
           {/* Header Section */}
-          <div className="mb-24">
+          <div className="mb-10 sm:mb-12 lg:mb-14">
             <AnimateOnScroll direction="down" delayMs={300}>
-              <h3 className="text-2xl lg:text-4xl font-medium mb-10 opacity-90">
+              <h3 className="text-xl sm:text-2xl lg:text-3xl font-medium mb-6 opacity-90 leading-[1.3]">
                 {t("headline")}
               </h3>
             </AnimateOnScroll>
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center lg:gap-0">
               <AnimateOnScroll direction="right" delayMs={300}>
-                <h2 className="text-8xl md:text-9xl lg:text-[200px] xl:text-[280px] font-bold tracking-wide drop-shadow-[24px_24px_8px_rgba(0,0,0,0.12)] transition-all duration-300">
+                <h2 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[160px] font-bold tracking-wide">
                   {t("sub-headline.number")}
                 </h2>
               </AnimateOnScroll>
               <AnimateOnScroll direction="right" delayMs={300}>
                 <div className="bg-[#B90012] bg-opacity-60 backdrop-blur-sm px-4 sm:px-6 py-2 sm:py-3 inline-block self-start sm:self-center w-fit">
-                  <span className="text-xl sm:text-2xl font-semibold tracking-wide whitespace-normal sm:whitespace-nowrap">
+                  <span className="text-lg sm:text-xl lg:text-2xl font-semibold tracking-wide">
                     {t("sub-headline.text")}
                   </span>
                 </div>
@@ -47,7 +47,7 @@ export default function KeyFeaturesContent() {
                       sizes="112px"
                     />
                   </div>
-                  <p className="text-base sm:text-lg lg:text-xl font-medium leading-relaxed">
+                  <p className="text-sm sm:text-base lg:text-md font-medium leading-[1.6]">
                     {t("list.feature1")}
                   </p>
                 </div>
@@ -63,7 +63,7 @@ export default function KeyFeaturesContent() {
                       sizes="112px"
                     />
                   </div>
-                  <p className="text-base sm:text-lg lg:text-xl font-medium leading-relaxed">
+                  <p className="text-sm sm:text-base lg:text-md font-medium leading-[1.6]">
                     {t("list.feature2")}
                   </p>
                 </div>
@@ -81,7 +81,7 @@ export default function KeyFeaturesContent() {
                       sizes="112px"
                     />
                   </div>
-                  <p className="text-base sm:text-lg lg:text-xl font-medium leading-relaxed">
+                  <p className="text-sm sm:text-base lg:text-md font-medium leading-[1.6]">
                     {t("list.feature3")}
                   </p>
                 </div>
@@ -93,7 +93,7 @@ export default function KeyFeaturesContent() {
         {/* Right Image Area */}
         <div className="hidden lg:flex lg:w-[35%] relative justify-end z-0">
           <AnimateOnScroll direction="left" delayMs={300}>
-            <div className="relative lg:h-[800px] lg:w-auto aspect-[3/4]">
+            <div className="relative h-[520px] xl:h-[620px] w-[360px] xl:w-[420px]">
               <Image
                 src="/key-features-main.png"
                 alt="Smart Gym Workout"

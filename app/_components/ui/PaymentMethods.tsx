@@ -51,7 +51,7 @@ export default function PaymentMethods() {
   return (
     <div className="flex flex-col items-center md:items-end">
       <div className="flex flex-col gap-8">
-        <span className="text-foreground border sm:text-lg md:text-xl border-foreground bg-black px-2 py-2 text-center">
+        <span className="text-foreground border border-foreground bg-black px-3 py-2 text-sm sm:text-base lg:text-lg text-center inline-block">
           {t("checkout now")}
         </span>
         <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
@@ -62,7 +62,7 @@ export default function PaymentMethods() {
               key={method.id}
               width={120}
               height={44}
-              className="w-[120px] h-[44px]"
+              className="w-[100px] sm:w-[120px] h-auto"
             />
           ))}
         </div>

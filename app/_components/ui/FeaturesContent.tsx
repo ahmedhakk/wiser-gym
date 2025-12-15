@@ -1,4 +1,4 @@
-import FeatureItem from "@/app/_components/ui/FeatureItem";
+import FeatureItem from "@/ui/FeatureItem";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import AnimateOnScroll from "@/ui/AnimateOnScroll";
@@ -25,13 +25,21 @@ export default function FeaturesContent() {
   ];
 
   return (
-    <div className="container max-w-9xl mx-auto px-12 py-6 h-screen">
-      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mt-4 md:mt-28 mb-5 md:mb-24">
+    <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-10">
+      <h2
+        className="
+          text-xl sm:text-2xl lg:text-3xl xl:text-4xl
+          font-bold
+          mt-6 sm:mt-10 lg:mt-16
+          mb-8 sm:mb-12 lg:mb-16
+          leading-[1.25]
+        "
+      >
         {t("title") + ": "}
         <span className="font-normal">{t("FeaturesOverview.headline")}</span>
       </h2>
 
-      <div className="flex flex-col md:flex-row justify-between gap-2">
+      <div className="flex flex-col lg:flex-row justify-between gap-8 lg:gap-12">
         <AnimateOnScroll direction="right" delayMs={350}>
           <div>
             {featuresListLeft.map((feature, index) => (
@@ -46,7 +54,7 @@ export default function FeaturesContent() {
           alt="Features Image"
           width={600}
           height={800}
-          className="hidden lg:block w-auto h-auto max-w-full object-contain"
+          className="hidden lg:block max-w-md xl:max-w-lg object-contain"
         />
         <AnimateOnScroll direction="left" delayMs={350}>
           <div>

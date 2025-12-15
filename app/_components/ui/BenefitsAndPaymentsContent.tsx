@@ -4,10 +4,10 @@ import AnimateOnScroll from "@/ui/AnimateOnScroll";
 
 export default function BenefitsAndPaymentsContent() {
   return (
-    <div className="container max-w-9xl mx-auto px-12 py-6 h-screen">
+    <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-10">
       {/* Bebefits */}
       <AnimateOnScroll direction="right" delayMs={300}>
-        <BenefitsList className="my-20 md:mt-56 md:mb-48" />
+        <BenefitsList className="mt-10 sm:mt-12 mb-10 sm:mb-12 lg:mb-16" />
       </AnimateOnScroll>
 
       {/* Payments */}

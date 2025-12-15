@@ -7,7 +7,7 @@ export default function FeaturesOverview() {
     <AnimateOnScroll direction="up" delayMs={300}>
       <section
         id="features-overview"
-        className="w-full relative h-screen overflow-hidden"
+        className="w-full relative min-h-screen py-16 md:py-24"
       >
         <Image
           src="/bg-features-overview.png"
@@ -18,7 +18,7 @@ export default function FeaturesOverview() {
         />
 
         {/* red overlay */}
-        <div className="container max-w-9xl mx-auto px-12 py-6 h-screen bg-[#CF0002] opacity-85 absolute inset-0 mix-blend-color -z-10"></div>
+        <div className="absolute inset-0 bg-[#CF0002]/85 mix-blend-color -z-10" />
 
         {/* Content */}
         <FeaturesContent />

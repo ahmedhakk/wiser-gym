@@ -11,29 +11,26 @@ export default function PurchaseDetails() {
 
   return (
     <AnimateOnScroll direction="up" delayMs={300}>
-      <section className="w-full h-screen relative">
+      <section className="w-full relative min-h-screen xl:h-screen overflow-hidden">
         {/* Background Images */}
         <div
-          className={`flex absolute inset-0 -z-20 ${
+          className={`absolute inset-0 -z-20 hidden md:flex ${
             isRTL ? "flex-row-reverse" : ""
           }`}
         >
-          {/* Left Image */}
           <Image
             src="/purchase.png"
             alt="purchase"
-            width="788"
-            height="960"
-            className="w-1/2 h-full object-cover hidden md:block"
+            width={788}
+            height={960}
+            className="w-1/2 h-full object-cover"
           />
-
-          {/* Right Image */}
           <Image
             src="/bg-hero.jpg"
             alt="hero"
-            width="788"
-            height="960"
-            className="w-1/2 h-full object-cover hidden md:block"
+            width={788}
+            height={960}
+            className="w-1/2 h-full object-cover"
           />
         </div>
 
@@ -41,7 +38,7 @@ export default function PurchaseDetails() {
         <div className="hidden md:block absolute top-0 right-0 w-1/2 h-full bg-[#E60017D9] -z-10"></div>
 
         {/* Content */}
-        <PurchaseDetailsContent />
+        <PurchaseDetailsContent isRTL={isRTL} />
       </section>
     </AnimateOnScroll>
   );
