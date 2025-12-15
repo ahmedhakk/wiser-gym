@@ -5,10 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 
-type imageLinks = {
-  src: string;
-  alt: string;
-};
+type imageLinks = { src: string; alt: string };
 
 const paymentMethods: imageLinks[] = [
   { src: "/payment-methods/tabby.png", alt: "Tabby" },
@@ -37,11 +34,11 @@ const ProductDetails: React.FC = () => {
   const increase = () => setQty((q) => q + 1);
 
   return (
-    <section className="w-full lg:w-1/2">
-      <div className="mx-auto px-4 py-8 lg:px-12">
+    <section className="w-full min-w-0">
+      <div className="w-full">
         {/* Title */}
-        <header className="space-y-2 mb-12 lg:mb-2 xl:mb-4">
-          <h1 className="text-xl leading-snug text-gray-900 sm:text-2xl mb-4 lg:mb-2">
+        <header className="space-y-2 mb-8">
+          <h1 className="text-xl sm:text-2xl leading-snug text-gray-900">
             {t("title")}
           </h1>
 
@@ -61,34 +58,32 @@ const ProductDetails: React.FC = () => {
         </header>
 
         {/* Price */}
-        <div className="flex items-baseline gap-1 w-fit relative mb-4 lg:mb-2 xl:my-8">
-          <span className="text-6xl font-bold tracking-wide text-gray-900">
+        <div className="flex items-start gap-2 mb-6">
+          <span className="text-5xl sm:text-6xl font-bold tracking-wide text-gray-900 leading-none">
             {t("price")}
           </span>
-          <span className="text-2xl text-gray-800 absolute -right-9 -top-4">
-            <Image
-              src="/icons/SAR.svg"
-              alt="SAR"
-              width={56}
-              height={56}
-              className="w-9 h-9"
-            />
-          </span>
+          <Image
+            src="/icons/SAR.svg"
+            alt="SAR"
+            width={36}
+            height={36}
+            className="w-8 h-8 sm:w-9 sm:h-9 mt-1"
+          />
         </div>
 
         {/* Red banner */}
-        <p className="bg-accent px-4 py-3 text-md leading-relaxed text-white lg:text-base xl:text-lg">
+        <p className="bg-accent px-4 py-3 text-white text-sm sm:text-base leading-relaxed mb-6">
           {t("about")}
         </p>
 
         {/* Features */}
         <section>
-          <h2 className="text-2xl font-bold tracking-tight text-gray-900 my-4 md:text-3xl lg:text-5xl xl:text-6xl md:my-8 lg:my-5">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold my-4 text-black">
             {t("features.headline")}
           </h2>
 
-          <div className="bg-[#E6E7E8] px-5 py-4 text-sm text-gray-800 sm:text-xl mb-8">
-            <ul className="list-disc pl-5">
+          <div className="bg-[#E6E7E8] px-5 py-4 text-sm sm:text-base text-gray-800 mb-8">
+            <ul className="list-disc pl-5 space-y-1">
               <li>{t("features.list.feature1")}</li>
               <li>{t("features.list.feature2")}</li>
               <li>{t("features.list.feature3")}</li>
@@ -100,14 +95,13 @@ const ProductDetails: React.FC = () => {
         </section>
 
         {/* Quantity + CTA */}
-        <div className="flex flex-col gap-4 pt-2 lg:flex-row lg:items-center">
-          {/* Quantity selector */}
+        <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
           <div className="inline-flex items-center justify-center border border-gray-300 w-fit">
             <button
               type="button"
               onClick={decrease}
               aria-label="Decrease quantity"
-              className="h-11 w-11 border-r border-gray-300 text-3xl leading- bg-[#E6E7E8] text-gray-700 hover:bg-gray-50"
+              className="h-11 w-11 border-r border-gray-300 text-3xl bg-[#E6E7E8] text-gray-700 hover:bg-gray-50"
             >
               −
             </button>
@@ -124,38 +118,36 @@ const ProductDetails: React.FC = () => {
             </button>
           </div>
 
-          {/* Buy button */}
           <button
             type="button"
-            className="flex-1 bg-accent px-6 py-3 text-center text-sm font-semibold text-white shadow-sm transition hover:bg-primary-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2 sm:text-base"
+            className="flex-1 bg-accent px-6 py-3 text-center text-sm sm:text-base font-semibold text-white shadow-sm transition hover:bg-primary-hover"
           >
             {t("buyNow")}
           </button>
         </div>
 
         {/* Payment methods */}
-        <div className="my-6 flex flex-wrap items-center gap-3">
+        <div className="my-6 grid grid-cols-4 sm:grid-cols-5 gap-3 items-center max-w-[420px]">
           {paymentMethods.map((pm) => (
             <div
               key={pm.alt}
-              className="flex items-center justify-center rounded-md bg-gray-100 px-2 py-1"
+              className="flex items-center justify-center rounded-md bg-gray-100 px-2 py-2"
             >
               <Image
                 src={pm.src}
                 alt={pm.alt}
                 width={60}
                 height={60}
-                className="h-8 w-auto object-contain"
+                className="h-7 w-auto object-contain"
               />
             </div>
           ))}
         </div>
 
-        {/* Divider */}
         <div className="border-t-2 border-dashed border-gray-200 pt-5" />
 
         {/* Social icons */}
-        <div className="flex flex-wrap justify-end lg:justify-start mt-4 lg:mt-0 gap-3">
+        <div className="flex flex-wrap gap-3 mt-4">
           {socialIcons.map((icon) => (
             <Link key={icon.alt} href="#">
               <Image
@@ -163,7 +155,7 @@ const ProductDetails: React.FC = () => {
                 alt={icon.alt}
                 width={56}
                 height={56}
-                className="w-10 h-10 md:w-12 md:h-12"
+                className="w-10 h-10"
               />
             </Link>
           ))}

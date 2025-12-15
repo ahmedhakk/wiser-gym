@@ -4,64 +4,65 @@ import AnimateOnScroll from "@/ui/AnimateOnScroll";
 
 export default function CTASection() {
   const t = useTranslations("CTASection");
+
   return (
-    <section className="relative h-[900px] w-full">
+    <section className="relative w-full overflow-hidden h-[640px] md:h-[720px] lg:h-[760px]">
       <Image
         src="/bg-cta.png"
         alt="CTA Background"
         fill
         priority
-        className="absolute inset-0 h-full w-full object-cover"
+        className="absolute inset-0 -z-20 object-cover"
         sizes="100vw"
       />
 
-      <div className="container relative z-10 mx-auto flex h-full max-w-7xl flex-col items-center justify-center px-4 text-center text-white">
-        <AnimateOnScroll direction="left" delayMs={300}>
-          <h1
-            className="
-            font-bold leading-tight
-            text-3xl
-            sm:text-4xl
-            md:text-5xl
-            lg:text-6xl
-            xl:text-7xl
-          "
-          >
-            {t("mainText")}
-          </h1>
-        </AnimateOnScroll>
+      <div className="mx-auto h-full w-full max-w-7xl px-4 sm:px-6 lg:px-10">
+        <div className="flex h-full flex-col items-center justify-center text-center text-white pt-10 md:pt-0">
+          <AnimateOnScroll direction="left" delayMs={300}>
+            <h1
+              className="
+                max-w-7xl font-bold
+                text-[clamp(2.25rem,4.5vw,4.25rem)]
+                leading-[1.08]
+                tracking-normal sm:tracking-wide
+              "
+            >
+              {t("mainText")}
+            </h1>
+          </AnimateOnScroll>
 
-        <AnimateOnScroll direction="right" delayMs={300}>
-          <p
-            className="
-          mt-6 
-          text-sm
-          sm:text-base
-          md:text-xl
-          lg:text-2xl
-          font-bold
-          lg:leading-loose
-          "
-          >
-            {t("subText")}
-          </p>
-        </AnimateOnScroll>
+          <AnimateOnScroll direction="right" delayMs={300}>
+            <p
+              className="
+                mt-6 max-w-5xl font-semibold
+                text-[clamp(1rem,1.6vw,1.5rem)]
+                leading-[1.65]
+                text-white/90
+                tracking-normal sm:tracking-wider
+              "
+            >
+              {t("subText")}
+            </p>
+          </AnimateOnScroll>
 
-        <AnimateOnScroll direction="up" delayMs={300}>
-          <button
-            className="
-          mt-16
-          bg-primary px-6 py-3
-          text-sm font-semibold uppercase tracking-wide
-          text-white shadow-lg
-          transition hover:bg-primary-hover
-          sm:px-10 sm:text-md 
-          md:text-base
-          "
-          >
-            {t("buttonText")}
-          </button>
-        </AnimateOnScroll>
+          <AnimateOnScroll direction="up" delayMs={300}>
+            <button
+              type="button"
+              className="
+                mt-10 md:mt-12
+                bg-primary hover:bg-primary-hover
+                px-8 py-3
+                text-[clamp(.95rem,1.2vw,1.125rem)]
+                font-bold
+                shadow-lg
+                transition-colors duration-300
+                focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-black/40
+              "
+            >
+              {t("buttonText")}
+            </button>
+          </AnimateOnScroll>
+        </div>
       </div>
     </section>
   );

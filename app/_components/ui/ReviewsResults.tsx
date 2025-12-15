@@ -26,7 +26,7 @@ const ReviewsResults: React.FC = () => {
         <div className="flex flex-wrap items-center gap-x-12 gap-y-3 text-sm sm:text-lg">
           {benefits.map((benefit) => (
             <AnimateOnScroll direction="up" delayMs={300} key={benefit}>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 rtl:flex-row-reverse">
                 {/* Check icon in circle */}
                 <span className="flex h-5 w-5 items-center justify-center rounded-full bg-primary text-xs text-white">
                   <svg

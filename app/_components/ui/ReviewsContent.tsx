@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import Image from "next/image";
 import { useTranslations, useLocale } from "next-intl";
 import ReviewCard from "@/ui/ReviewCard";
@@ -10,7 +10,7 @@ import AnimateOnScroll from "./AnimateOnScroll";
 type Review = {
   id: number;
   name: string;
-  rating: number; // 1-5
+  rating: number;
   message: string;
   avatarSrc: string;
 };
@@ -64,42 +64,42 @@ export default function ReviewsContent() {
     setCurrentIndex((prev) => (prev === reviews.length - 1 ? 0 : prev + 1));
   };
 
-  // Calculate how many cards are visible at current index
-  const getVisibleReviews = () => {
+  const visibleReviews = useMemo(() => {
     const maxVisible = 3;
-    const visible = [];
-
+    const out: Review[] = [];
     for (let i = 0; i < Math.min(maxVisible, reviews.length); i++) {
-      const index = (currentIndex + i) % reviews.length;
-      visible.push(reviews[index]);
+      out.push(reviews[(currentIndex + i) % reviews.length]);
     }
+    return out;
+  }, [currentIndex]);
 
-    return visible;
-  };
-
-  const visibleReviews = getVisibleReviews();
+  const animDir = isRTL ? "right" : "left";
 
   return (
-    <div className="container max-w-9xl mx-auto px-4 py-6 md:px-12 h-full">
-      <header className="flex justify-between items-center mt-16">
-        <h1 className="text-xl md:text-2xl lg:text-4xl font-bold">
+    <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-10 py-10 lg:py-12 h-full">
+      <header className="flex items-center justify-between gap-6">
+        <h1 className="text-xl md:text-2xl lg:text-4xl font-bold text-white">
           {t("headline")}
         </h1>
 
         <div className="flex gap-3 md:gap-6">
-          <button onClick={handlePrevious} aria-label="Previous review">
+          <button
+            type="button"
+            onClick={handlePrevious}
+            aria-label="Previous review"
+          >
             <Image
               src={isRTL ? "/icons/right-arrow.svg" : "/icons/left-arrow.svg"}
-              alt="previous arrow"
+              alt=""
               width={56}
               height={56}
               className="w-8 h-8 md:w-12 md:h-12"
             />
           </button>
-          <button onClick={handleNext} aria-label="Next review">
+          <button type="button" onClick={handleNext} aria-label="Next review">
             <Image
               src={isRTL ? "/icons/left-arrow.svg" : "/icons/right-arrow.svg"}
-              alt="next arrow"
+              alt=""
               width={56}
               height={56}
               className="w-8 h-8 md:w-12 md:h-12"
@@ -108,25 +108,15 @@ export default function ReviewsContent() {
         </div>
       </header>
 
-      {/* Reviews Carousel - responsive */}
-      <div className="mt-12 overflow-hidden">
-        <div className="flex gap-6 transition-all duration-500 ease-in-out items-stretch">
+      {/* Reviews row */}
+      <div className="mt-10 overflow-hidden">
+        <div className="flex gap-6 items-stretch rtl:flex-row-reverse">
           {visibleReviews.map((review, idx) => (
             <div
               key={`${review.id}-${currentIndex}-${idx}`}
-              className={`
-                  w-full flex-shrink-0 flex
-                  sm:w-[calc(50%-12px)] 
-                  lg:w-[calc(33.333%-16px)]
-                  transition-all duration-500 ease-in-out
-                  ${
-                    idx === 0
-                      ? "opacity-100 translate-x-0"
-                      : "opacity-100 translate-x-0"
-                  }
-                `}
+              className="basis-full sm:basis-1/2 lg:basis-1/3 flex"
             >
-              <AnimateOnScroll direction="left">
+              <AnimateOnScroll direction={animDir}>
                 <ReviewCard
                   name={review.name}
                   message={review.message}
@@ -139,7 +129,6 @@ export default function ReviewsContent() {
         </div>
       </div>
 
-      {/* content */}
       <ReviewsResults />
     </div>
   );

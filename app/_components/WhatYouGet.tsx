@@ -3,16 +3,15 @@ import WhatYouGetContent from "@/ui/WhatYouGetContent";
 
 export default function WhatYouGet() {
   return (
-    <section className="w-full h-screen relative transition-all duration-300">
+    <section className="w-full relative overflow-hidden py-14 md:py-16 lg:py-20">
       <Image
         src="/bg-what-you-will-get.png"
         alt="what you will get"
-        width={788}
-        height={960}
-        className="w-full h-full object-cover absolute -z-20"
+        fill
+        priority
+        className="object-cover -z-20"
       />
 
-      {/* Content */}
       <WhatYouGetContent />
     </section>
   );

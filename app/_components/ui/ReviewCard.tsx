@@ -16,7 +16,7 @@ const ReviewCard: React.FC<ReviewCardProps> = ({
   rating,
 }) => {
   return (
-    <div className="w-full max-w-xl h-full rounded-2xl bg-white px-5 py-6 shadow-md sm:px-8 sm:py-7 md:px-10 md:py-8 flex flex-col">
+    <div className="w-full h-full rounded-2xl bg-white px-5 py-6 shadow-md sm:px-8 sm:py-7 md:px-10 md:py-8 flex flex-col">
       {/* Top row: avatar + name + stars */}
       <div className="flex items-center gap-4 sm:gap-5">
         {/* Avatar */}
