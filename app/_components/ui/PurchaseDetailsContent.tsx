@@ -17,53 +17,68 @@ export default function PurchaseDetailsContent({ isRTL }: { isRTL: boolean }) {
     <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-10 py-10 md:py-12 h-full relative">
       {/* ========================= */}
       {/* XL+ Desktop: circle + text paired (mirrors in RTL) */}
+      {/* Fix zoom/small-height clipping */}
       {/* ========================= */}
       <div className="hidden xl:block absolute inset-0">
-        <div className="absolute inset-0 flex items-center">
+        <div className="absolute inset-0 flex items-center py-10 [max-height:820px]:py-6">
           <div className="w-full">
-            <div className="grid grid-rows-3 gap-16 2xl:gap-20">
+            <div className="grid grid-rows-3 gap-12 2xl:gap-16 [max-height:820px]:gap-8">
               {purchaseList.map((purchase) => (
                 <div
                   key={purchase.id}
                   className="grid grid-cols-2 items-center"
                 >
-                  {/* RTL: Text on LEFT (red overlay), Circle on RIGHT (split) */}
                   {isRTL ? (
                     <>
-                      <div className="pr-28 2xl:pr-36 pl-16 2xl:pl-24 text-right">
+                      {/* Text (LEFT in RTL) */}
+                      <div className="pr-24 2xl:pr-32 pl-12 2xl:pl-20 text-right">
                         <AnimateOnScroll direction={animDir} delayMs={300}>
-                          <p className="text-2xl 2xl:text-3xl max-w-[560px] text-white capitalize leading-[1.6]">
+                          <p className="text-xl 2xl:text-2xl max-w-[560px] text-white capitalize leading-[1.6] [max-height:820px]:text-lg">
                             {purchase.text}
                           </p>
                         </AnimateOnScroll>
                       </div>
 
+                      {/* Circle (RIGHT on split) */}
                       <div className="flex justify-start pl-6">
                         <Image
                           src={purchase.imageSrc}
                           alt={purchase.text}
                           width={280}
                           height={280}
-                          className="w-56 h-56 2xl:w-64 2xl:h-64 object-cover rounded-full outline outline-8 outline-white -translate-x-1/2"
+                          className="
+                      w-44 h-44 2xl:w-56 2xl:h-56
+                      [max-height:820px]:w-36 [max-height:820px]:h-36
+                      object-cover rounded-full
+                      outline outline-6 2xl:outline-8 outline-white
+                      -translate-x-1/2
+                    "
                         />
                       </div>
                     </>
                   ) : (
                     <>
-                      {/* LTR: Circle on LEFT (split), Text on RIGHT (red overlay) */}
+                      {/* Circle (LEFT on split) */}
                       <div className="flex justify-end pr-6">
                         <Image
                           src={purchase.imageSrc}
                           alt={purchase.text}
                           width={280}
                           height={280}
-                          className="w-56 h-56 2xl:w-64 2xl:h-64 object-cover rounded-full outline outline-8 outline-white translate-x-1/2"
+                          className="
+                      w-44 h-44 2xl:w-56 2xl:h-56
+                      [max-height:820px]:w-36 [max-height:820px]:h-36
+                      object-cover rounded-full
+                      outline outline-6 2xl:outline-8 outline-white
+                      translate-x-1/2
+                    "
                         />
                       </div>
 
-                      <div className="pl-28 2xl:pl-36 pr-16 2xl:pr-24 text-left">
+                      {/* Text (RIGHT in LTR) */}
+                      <div className="pl-24 2xl:pl-32 pr-12 2xl:pr-20 text-left">
                         <AnimateOnScroll direction={animDir} delayMs={300}>
-                          <p className="text-2xl 2xl:text-3xl max-w-[560px] text-white capitalize leading-[1.6]">
+                          <p className="text-xl 2xl:text-2xl max-w-[560px] text-white capitalize leading-[1.6] [max-height:820px]:text-lg">
                             {purchase.text}
                           </p>
                         </AnimateOnScroll>
