@@ -3,7 +3,7 @@ import EarlyAccessBannerContent from "@/ui/EarlyAccessBannerContent";
 
 export default function EarlyAccessBanner() {
   return (
-    <section className="relative w-full h-[550px] overflow-hidden">
+    <section className="relative w-full h-[600px] md:h-[500px] overflow-hidden">
       <Image
         src="/bg-early-access-banner.png"
         alt="early access background"

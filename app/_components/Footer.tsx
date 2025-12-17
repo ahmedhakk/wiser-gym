@@ -28,9 +28,9 @@ export default function Footer() {
   const t = useTranslations();
 
   return (
-    <footer className="w-full bg-white px-8 pt-16">
+    <footer className="w-full bg-white pt-16">
       <AnimateOnScroll direction="up" delayMs={300}>
-        <div className="bg-[#F9F9F9] w-full rounded-t-[80px] border border-[#A6A8AB]">
+        <div className="bg-[#F9F9F9] w-full border-t">
           <div className="mx-auto w-full max-w-7xl px-4 pt-12 pb-6 text-black">
             {/* upper footer */}
             <div className="flex flex-col items-center gap-8 md:flex-row md:items-start md:justify-between">

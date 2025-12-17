@@ -104,7 +104,7 @@ const PricingBreakdown: React.FC = () => {
 
               <button
                 type="button"
-                className="w-full bg-red-600 px-6 py-3 text-center text-xs font-semibold uppercase tracking-wide text-white shadow-md transition hover:bg-red-500 sm:text-sm"
+                className="w-full bg-red-600 px-6 py-3 text-center text-xs font-semibold uppercase tracking-wide text-white shadow-md transition hover:bg-red-500 sm:text-sm rounded"
               >
                 {t("leftColumn.cta")}
               </button>
@@ -160,7 +160,7 @@ const PricingBreakdown: React.FC = () => {
 
               <button
                 type="button"
-                className="w-full bg-red-600 px-6 py-3 text-center text-xs font-semibold uppercase tracking-wide text-white shadow-md transition hover:bg-red-500 sm:text-sm"
+                className="w-full bg-red-600 px-6 py-3 text-center text-xs font-semibold uppercase tracking-wide text-white shadow-md transition hover:bg-red-500 sm:text-sm rounded"
               >
                 {t("rightColumn.cta")}
               </button>

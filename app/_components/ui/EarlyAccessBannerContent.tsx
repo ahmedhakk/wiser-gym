@@ -22,7 +22,7 @@ export default function EarlyAccessBannerContent() {
   return (
     <div className="relative mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-10 text-white h-full">
       <div className="flex h-full flex-col lg:py-14 justify-between">
-        <div className="grid gap-10 md:grid-cols-2 md:gap-12 mt-8 rtl:text-right">
+        <div className="grid gap-10 md:grid-cols-2 md:gap-20 mt-8 rtl:text-right">
           {/* Left side */}
           <AnimateOnScroll direction={leftAnim} delayMs={300}>
             <div>
@@ -71,7 +71,7 @@ export default function EarlyAccessBannerContent() {
           <AnimateOnScroll direction="up" delayMs={300}>
             <button
               type="button"
-              className="inline-flex items-center justify-center rounded-sm bg-white px-6 py-3 text-center text-sm font-semibold tracking-wide text-gray-900 shadow-lg sm:px-10 sm:text-lg md:text-xl"
+              className="inline-flex items-center justify-center rounded bg-white px-6 py-3 text-center text-sm font-semibold tracking-wide text-gray-900 shadow-lg sm:px-10 sm:text-lg md:text-xl"
             >
               {t("cta")}
             </button>

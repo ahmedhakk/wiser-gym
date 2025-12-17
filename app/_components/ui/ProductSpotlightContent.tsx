@@ -21,7 +21,7 @@ export default function ProductSpotlightContent() {
             </span>
           </p>
 
-          <button className="bg-primary hover:bg-primary-hover text-white text-sm sm:text-base lg:text-lg font-bold py-3 px-6 transition-colors shadow-lg capitalize tracking-wide w-fit">
+          <button className="bg-primary hover:bg-primary-hover text-white text-sm sm:text-base lg:text-lg font-bold py-3 px-6 transition-colors shadow-lg capitalize tracking-wide w-fit rounded">
             {t("ProductSpotlight.cta")}
           </button>
         </AnimateOnScroll>

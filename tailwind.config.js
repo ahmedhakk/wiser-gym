@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-roboto)", "system-ui", "sans-serif"], // Uses the variable from layout.tsx with fallbacks
+        sans: ["var(--font-poppins)", "sans-serif"],
       },
       colors: {
         primary: {

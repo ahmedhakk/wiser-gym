@@ -23,7 +23,7 @@ export default function LifestyleTransformationContent() {
       {/* Text Content */}
       <div className="relative z-10 flex flex-col gap-12 lg:gap-8 md:flex-row md:justify-center md:items-center h-full min-h-[inherit] px-4 md:px-8">
         <AnimateOnScroll direction="right" className="md:flex-1" delayMs={350}>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold leading-[1.2] lg:leading-[1.15]">
+          <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold leading-[1.2] lg:leading-[1.15] mb-12 md:mb-48 xl:mb-32">
             {t("LifestyleTransformation.headline")} <br />
             {t("title")}
           </h2>

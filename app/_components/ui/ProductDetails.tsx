@@ -72,7 +72,7 @@ const ProductDetails: React.FC = () => {
         </div>
 
         {/* Red banner */}
-        <p className="bg-accent px-3 sm:px-4 py-2.5 sm:py-3 text-white text-sm sm:text-base leading-relaxed mb-5 sm:mb-6">
+        <p className="bg-accent px-3 sm:px-4 py-2.5 sm:py-3 text-white text-sm sm:text-base leading-relaxed mb-5 sm:mb-6 rounded">
           {t("about")}
         </p>
 
@@ -82,7 +82,7 @@ const ProductDetails: React.FC = () => {
             {t("features.headline")}
           </h2>
 
-          <div className="bg-[#E6E7E8] px-5 py-4 text-sm sm:text-base text-gray-800 mb-8">
+          <div className="bg-[#E6E7E8] px-5 py-4 text-sm sm:text-base text-gray-800 mb-8 rounded">
             <ul className="list-disc pl-5 space-y-1">
               <li>{t("features.list.feature1")}</li>
               <li>{t("features.list.feature2")}</li>
@@ -96,7 +96,7 @@ const ProductDetails: React.FC = () => {
 
         {/* Quantity + CTA */}
         <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
-          <div className="inline-flex items-center justify-center border border-gray-300 w-fit">
+          <div className="inline-flex items-center justify-center border border-gray-300 w-fit rounded">
             <button
               type="button"
               onClick={decrease}
@@ -120,7 +120,7 @@ const ProductDetails: React.FC = () => {
 
           <button
             type="button"
-            className="flex-1 bg-accent px-6 py-3 text-center text-sm sm:text-base font-semibold text-white shadow-sm transition hover:bg-primary-hover"
+            className="flex-1 bg-accent px-6 py-3 text-center text-sm sm:text-base font-semibold text-white shadow-sm transition hover:bg-primary-hover rounded"
           >
             {t("buyNow")}
           </button>

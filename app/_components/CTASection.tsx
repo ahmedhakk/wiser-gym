@@ -58,6 +58,7 @@ export default function CTASection() {
                 transition-colors duration-300
                 min-h-[48px]
                 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-black/40
+                rounded
               "
             >
               {t("buttonText")}

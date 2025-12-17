@@ -49,7 +49,7 @@ export default function GymPainPointsContent() {
               />
 
               <div className="absolute bottom-0 left-0 w-full p-3 sm:p-4 md:p-6 bg-[#FF001AB2]">
-                <h3 className="text-white text-sm sm:text-base md:text-md lg:text-lg font-medium leading-[1.3]">
+                <h3 className="text-white text-sm sm:text-base md:text-md font-medium leading-[1.3]">
                   {item.title}
                 </h3>
               </div>

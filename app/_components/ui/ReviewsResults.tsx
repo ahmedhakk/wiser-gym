@@ -48,7 +48,7 @@ const ReviewsResults: React.FC = () => {
           <AnimateOnScroll direction="up" delayMs={300}>
             <button
               type="button"
-              className="inline-flex w-full items-center justify-center rounded-sm bg-primary px-6 py-3 text-center text-sm font-semibold uppercase tracking-wide shadow-md transition hover:bg-primary-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-red-700 sm:w-auto sm:text-base"
+              className="inline-flex w-full items-center justify-center rounded bg-primary px-6 py-3 text-center text-sm font-semibold uppercase tracking-wide shadow-md transition hover:bg-primary-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-red-700 sm:w-auto sm:text-base"
             >
               {t("results.cta")}
             </button>
