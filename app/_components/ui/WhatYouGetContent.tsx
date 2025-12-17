@@ -29,7 +29,7 @@ export default function WhatYouGetContent() {
           >
             <div
               key={feature.id}
-              className="flex items-center gap-2 sm:gap-3 md:gap-4 bg-primary ltr:rounded-l-full rtl:rounded-r-full py-2 sm:py-3 pr-3 sm:pr-4"
+              className="flex items-center gap-2 sm:gap-3 md:gap-4 bg-primary ltr:rounded-l-full rtl:rounded-r-full pr-3 sm:pr-4"
             >
               <Image
                 src={feature.iconSrc}
