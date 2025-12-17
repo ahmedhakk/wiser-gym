@@ -5,8 +5,8 @@ export default function HeroContent() {
   const t = useTranslations("Hero.content");
 
   return (
-    <div className="flex-1 flex items-center mb-24">
-      <div className="max-w-3xl text-white space-y-6">
+    <div className="flex-1 flex items-center mb-12 md:mb-20 lg:mb-24">
+      <div className="max-w-3xl text-white space-y-4 sm:space-y-6">
         {/* Stars */}
         <AnimateOnScroll direction="up" delayMs={300}>
           <div className="flex space-x-1 text-[#FF8C00] text-base sm:text-lg">

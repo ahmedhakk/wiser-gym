@@ -49,7 +49,7 @@ export default function PaymentMethods() {
   const t = useTranslations("BenefitsAndPayments");
 
   return (
-    <div className="flex flex-col items-center md:items-end">
+    <div className="flex flex-col items-center">
       <div className="flex flex-col gap-8">
         <span className="text-foreground border border-foreground bg-black px-3 py-2 text-sm sm:text-base lg:text-lg text-center inline-block">
           {t("checkout now")}

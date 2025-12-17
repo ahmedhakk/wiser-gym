@@ -49,13 +49,14 @@ export default function CTASection() {
             <button
               type="button"
               className="
-                mt-10 md:mt-12
+                mt-8 sm:mt-10 md:mt-12
                 bg-primary hover:bg-primary-hover
-                px-8 py-3
-                text-[clamp(.95rem,1.2vw,1.125rem)]
+                px-8 sm:px-10 md:px-12 py-3.5 sm:py-4
+                text-base sm:text-lg md:text-xl
                 font-bold
                 shadow-lg
                 transition-colors duration-300
+                min-h-[48px]
                 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-black/40
               "
             >

@@ -114,7 +114,10 @@ export default function ReviewsContent() {
           {visibleReviews.map((review, idx) => (
             <div
               key={`${review.id}-${currentIndex}-${idx}`}
-              className="basis-full sm:basis-1/2 lg:basis-1/3 flex"
+              className={`basis-full sm:basis-1/2 lg:basis-1/3 flex
+                ${idx === 1 ? "hidden sm:flex" : ""}
+                ${idx === 2 ? "hidden lg:flex" : ""}
+              `}
             >
               <AnimateOnScroll direction={animDir}>
                 <ReviewCard

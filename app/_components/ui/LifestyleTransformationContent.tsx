@@ -17,7 +17,7 @@ export default function LifestyleTransformationContent() {
         alt="Lifestyle Transformation Content Image"
         width="788"
         height="960"
-        className="h-full object-contain absolute bottom-0 left-0 w-[38%] max-w-[480px] z-0 hidden lg:block"
+        className="h-full object-cover absolute bottom-0 left-0 w-[50%] max-w-[650px] z-0 hidden lg:block"
       />
 
       {/* Text Content */}

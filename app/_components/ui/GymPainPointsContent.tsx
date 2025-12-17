@@ -39,18 +39,17 @@ export default function GymPainPointsContent() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
         {painPoints.map((item) => (
           <AnimateOnScroll direction="left" key={item.id} delayMs={400}>
-            <div className="relative min-h-[140px] md:h-[340px] lg:h-[380px] xl:h-[420px] w-full md:rounded-2xl overflow-hidden group">
+            <div className="relative min-h-[160px] sm:min-h-[180px] md:h-[340px] lg:h-[380px] xl:h-[420px] w-full rounded-lg md:rounded-2xl overflow-hidden group">
               <Image
                 src={item.image}
                 alt={item.title}
                 width={396}
                 height={560}
-                className="hidden md:block absolute inset-0 w-full h-full object-cover grayscale transition-transform duration-500 group-hover:scale-105"
+                className="absolute inset-0 w-full h-full object-cover grayscale transition-transform duration-500 group-hover:scale-105"
               />
 
-              <div className="md:absolute md:bottom-0 md:left-0 w-full p-4 md:p-6 bg-[#FF001AB2]">
-                {/* <h3 className="text-white text-lg md:text-xl font-medium leading-snug"> */}
-                <h3 className="text-white text-base sm:text-md lg:text-lg font-medium leading-[1.3]">
+              <div className="absolute bottom-0 left-0 w-full p-3 sm:p-4 md:p-6 bg-[#FF001AB2]">
+                <h3 className="text-white text-sm sm:text-base md:text-md lg:text-lg font-medium leading-[1.3]">
                   {item.title}
                 </h3>
               </div>

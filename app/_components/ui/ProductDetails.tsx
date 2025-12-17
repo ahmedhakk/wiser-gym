@@ -37,8 +37,8 @@ const ProductDetails: React.FC = () => {
     <section className="w-full min-w-0">
       <div className="w-full">
         {/* Title */}
-        <header className="space-y-2 mb-8">
-          <h1 className="text-xl sm:text-2xl leading-snug text-gray-900">
+        <header className="space-y-2 mb-6 sm:mb-8">
+          <h1 className="text-lg sm:text-xl md:text-2xl leading-snug text-gray-900">
             {t("title")}
           </h1>
 
@@ -49,7 +49,7 @@ const ProductDetails: React.FC = () => {
                 key={i}
                 aria-hidden="true"
                 viewBox="0 0 20 20"
-                className="h-4 w-4 fill-current"
+                className="h-4 w-4 sm:h-5 sm:w-5 fill-current"
               >
                 <path d="M10 1.5 12.59 7l5.41.46-4.14 3.6 1.26 5.29L10 13.9l-5.12 2.45L6.14 11 2 7.46 7.41 7 10 1.5z" />
               </svg>
@@ -58,8 +58,8 @@ const ProductDetails: React.FC = () => {
         </header>
 
         {/* Price */}
-        <div className="flex items-start gap-2 mb-6">
-          <span className="text-5xl sm:text-6xl font-bold tracking-wide text-gray-900 leading-none">
+        <div className="flex items-start gap-2 mb-5 sm:mb-6">
+          <span className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-wide text-gray-900 leading-none">
             {t("price")}
           </span>
           <Image
@@ -67,12 +67,12 @@ const ProductDetails: React.FC = () => {
             alt="SAR"
             width={36}
             height={36}
-            className="w-8 h-8 sm:w-9 sm:h-9 mt-1"
+            className="w-7 h-7 sm:w-8 sm:h-8 md:w-9 md:h-9 mt-1"
           />
         </div>
 
         {/* Red banner */}
-        <p className="bg-accent px-4 py-3 text-white text-sm sm:text-base leading-relaxed mb-6">
+        <p className="bg-accent px-3 sm:px-4 py-2.5 sm:py-3 text-white text-sm sm:text-base leading-relaxed mb-5 sm:mb-6">
           {t("about")}
         </p>
 

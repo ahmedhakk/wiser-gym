@@ -59,10 +59,12 @@ const PricingBreakdown: React.FC = () => {
                   {/* Price tag */}
                   <div
                     className="
-                      z-10 mt-3 inline-flex items-center gap-2 bg-red-600 px-5 py-3 text-white shadow-lg
+                      z-10 mt-3 inline-flex items-center gap-2 bg-red-600 px-4 py-2.5 text-white shadow-lg
+                      sm:px-5 sm:py-3
                       md:absolute md:top-1/2 md:mt-0 md:-translate-y-1/2 md:px-7 md:py-4
-                      ltr:md:-right-32 rtl:md:-left-32
-                      lg:ltr:md:-right-40 lg:rtl:md:-left-40
+                      ltr:md:-right-28 rtl:md:-left-28
+                      lg:ltr:-right-32 lg:rtl:-left-32
+                      xl:ltr:-right-40 xl:rtl:-left-40
                     "
                   >
                     <Image
@@ -70,9 +72,9 @@ const PricingBreakdown: React.FC = () => {
                       alt="SAR"
                       width={28}
                       height={28}
-                      className="h-6 w-6 md:h-14 md:w-14 brightness-0 invert"
+                      className="h-5 w-5 sm:h-6 sm:w-6 md:h-10 md:w-10 lg:h-14 lg:w-14 brightness-0 invert"
                     />
-                    <span className="text-2xl font-bold tracking-wide sm:text-xl md:text-3xl lg:text-5xl">
+                    <span className="text-xl font-bold tracking-wide sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
                       {t("leftColumn.price")}
                     </span>
                   </div>

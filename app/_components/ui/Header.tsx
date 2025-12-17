@@ -30,7 +30,6 @@ export default function Header() {
     {
       name: t("navigation.Benefits"),
       href: "#benefits-and-payments",
-      highlight: true,
     },
     { name: t("navigation.Testimonials"), href: "#testimonials" },
     { name: t("navigation.Pricing"), href: "#pricing" },
@@ -53,17 +52,12 @@ export default function Header() {
         </div>
 
         {/* Desktop Menu */}
-        <div className="hidden lg:flex items-center gap-4 xl:gap-6">
+        <div className="hidden lg:flex items-center xl:gap-4">
           {navLinks.map((link) => (
             <Link
               key={link.name}
               href={link.href}
-              className={`text-xs xl:text-sm font-bold text-white transition hover:text-gray-300 whitespace-nowrap
-                ${
-                  link.highlight
-                    ? "transition-all duration-300 hover:bg-gradient-to-b hover:from-primary hover:to-primary-800 px-3 py-1.5"
-                    : ""
-                }`}
+              className="text-xs xl:text-sm font-bold text-white hover:text-gray-300 whitespace-nowrap transition-all duration-300 hover:bg-gradient-to-b hover:from-primary hover:to-primary-800 px-3 py-1.5"
             >
               {link.name}
             </Link>
@@ -201,12 +195,9 @@ export default function Header() {
             key={link.name}
             href={link.href}
             onClick={() => setIsOpen(false)}
-            className={`transition transform
-            ${isOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}
+            className={`transition transform px-3 py-1.5 hover:bg-gradient-to-b hover:from-primary hover:to-primary-800 hover:text-gray-300
             ${
-              link.highlight
-                ? "bg-gradient-to-b from-primary to-primary-800 px-3 py-1.5 hover:text-gray-300"
-                : "hover:text-primary-hover"
+              isOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
             }`}
             style={{
               transitionDelay: isOpen ? `${index * 50}ms` : "0ms",
