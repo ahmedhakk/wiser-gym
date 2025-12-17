@@ -7,7 +7,7 @@ export default function LifestyleTransformation() {
     <AnimateOnScroll direction="up" delayMs={300}>
       <section
         id="lifestyle-transformation"
-        className="w-full relative h-screen overflow-hidden"
+        className="w-full relative min-h-[600px] lg:min-h-[700px] xl:min-h-[800px] overflow-hidden"
       >
         <Image
           src="/bg-lifestyle-transformation.png"
@@ -17,9 +17,8 @@ export default function LifestyleTransformation() {
           priority
         />
 
-        {/* Content Container */}
         {/* red overlay */}
-        <div className="container max-w-9xl mx-auto px-12 py-6 h-screen bg-[#CF0002] opacity-85 absolute inset-0 -z-10"></div>
+        <div className="absolute inset-0 bg-[#CF0002] opacity-85 -z-10"></div>
 
         {/* Content */}
         <LifestyleTransformationContent />

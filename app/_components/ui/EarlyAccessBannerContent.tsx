@@ -67,7 +67,7 @@ export default function EarlyAccessBannerContent() {
         </div>
 
         {/* CTA bar */}
-        <div className="flex justify-center pb-16 md:pb-20">
+        <div className="flex justify-center pb-6">
           <AnimateOnScroll direction="up" delayMs={300}>
             <button
               type="button"

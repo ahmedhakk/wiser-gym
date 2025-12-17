@@ -14,13 +14,13 @@ export default function PurchaseDetailsContent({ isRTL }: { isRTL: boolean }) {
   const animDir = isRTL ? "right" : "left";
 
   return (
-    <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-10 py-10 md:py-12 h-full relative">
+    <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-10 py-10 md:py-12 lg:py-16 min-h-[700px] lg:min-h-[800px] xl:min-h-[850px] relative">
       {/* ========================= */}
       {/* XL+ Desktop: circle + text paired (mirrors in RTL) */}
       {/* Fix zoom/small-height clipping */}
       {/* ========================= */}
-      <div className="hidden xl:block absolute inset-0">
-        <div className="absolute inset-0 flex items-center py-10 [max-height:820px]:py-6">
+      <div className="hidden xl:flex xl:items-center xl:justify-center min-h-[inherit]">
+        <div className="w-full py-10">
           <div className="w-full">
             <div className="grid grid-rows-3 gap-12 2xl:gap-16 [max-height:820px]:gap-8">
               {purchaseList.map((purchase) => (
@@ -95,7 +95,7 @@ export default function PurchaseDetailsContent({ isRTL }: { isRTL: boolean }) {
       {/* ========================= */}
       {/* Tablet + Laptop (md → <xl): paired rows (mirrors in RTL) */}
       {/* ========================= */}
-      <div className="hidden md:flex xl:hidden min-h-[70vh] lg:min-h-[80vh] items-center">
+      <div className="hidden md:flex xl:hidden min-h-[600px] lg:min-h-[700px] items-center">
         <div className="w-full flex flex-col gap-10 lg:gap-12">
           {purchaseList.map((purchase) => (
             <div key={purchase.id} className="flex items-center">

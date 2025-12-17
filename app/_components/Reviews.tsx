@@ -5,7 +5,7 @@ export default function Reviews() {
   return (
     <section
       id="testimonials"
-      className="w-full relative min-h-screen overflow-hidden"
+      className="w-full relative min-h-[600px] lg:min-h-[700px] overflow-hidden"
     >
       <Image
         src="/bg-reviews.png"

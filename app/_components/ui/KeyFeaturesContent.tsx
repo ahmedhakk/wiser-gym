@@ -18,7 +18,7 @@ export default function KeyFeaturesContent() {
             </AnimateOnScroll>
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center lg:gap-0">
               <AnimateOnScroll direction="right" delayMs={300}>
-                <h2 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[160px] font-bold tracking-wide">
+                <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold tracking-wide">
                   {t("sub-headline.number")}
                 </h2>
               </AnimateOnScroll>

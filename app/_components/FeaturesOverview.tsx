@@ -7,7 +7,7 @@ export default function FeaturesOverview() {
     <AnimateOnScroll direction="up" delayMs={300}>
       <section
         id="features-overview"
-        className="w-full relative min-h-screen py-16 md:py-24"
+        className="w-full relative py-16 md:py-20 lg:py-24"
       >
         <Image
           src="/bg-features-overview.png"

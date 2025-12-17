@@ -11,7 +11,7 @@ export default function PurchaseDetails() {
 
   return (
     <AnimateOnScroll direction="up" delayMs={300}>
-      <section className="w-full relative min-h-screen xl:h-screen overflow-hidden">
+      <section className="w-full relative min-h-[700px] lg:min-h-[800px] xl:min-h-[850px] overflow-hidden">
         {/* Background Images */}
         <div
           className={`absolute inset-0 -z-20 hidden md:flex ${
