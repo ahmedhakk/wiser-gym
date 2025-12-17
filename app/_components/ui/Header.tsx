@@ -52,7 +52,7 @@ export default function Header() {
         </div>
 
         {/* Desktop Menu */}
-        <div className="hidden lg:flex items-center xl:gap-4">
+        <div className="hidden lg:flex items-center xl:gap-2">
           {navLinks.map((link) => (
             <Link
               key={link.name}

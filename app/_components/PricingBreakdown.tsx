@@ -20,10 +20,10 @@ const PricingBreakdown: React.FC = () => {
     <AnimateOnScroll direction="up" delayMs={500}>
       <section
         id="pricing"
-        className="min-h-screen w-full bg-white flex items-center justify-center"
+        className="min-h-screen md:min-h-0 w-full bg-white flex items-center justify-center"
         dir={isRTL ? "rtl" : "ltr"}
       >
-        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-10 py-10 lg:py-12">
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-10 py-10 md:py-16 lg:py-20">
           <div className="mt-8 grid gap-10 md:grid-cols-2 md:gap-12 lg:gap-16 md:items-stretch md:justify-items-center">
             {/* LEFT COLUMN */}
             <div className="flex w-full max-w-md flex-col justify-between gap-6">

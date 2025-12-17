@@ -1,18 +1,22 @@
 import Header from "@/ui/Header";
 import HeroContent from "@/ui/HeroContent";
-import Image from "next/image";
 
 export default function Hero() {
   return (
     <section id="hero" className="relative h-screen w-full overflow-hidden">
-      {/* Background image */}
-      <Image
-        src="/bg-hero.jpg"
-        alt="WiserGym Background"
-        fill
-        className="object-cover object-center -z-10"
-        priority
-      />
+      {/* Background video */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover -z-10"
+      >
+        <source
+          src="https://res.cloudinary.com/djiuuqgxs/video/upload/v1765977519/wisergym_doewdm.mp4"
+          type="video/mp4"
+        />
+      </video>
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/60 -z-10" />
 
