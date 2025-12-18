@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import Image from "next/image";
 import { useTranslations, useLocale } from "next-intl";
 import ReviewCard from "@/ui/ReviewCard";
@@ -54,26 +54,107 @@ export default function ReviewsContent() {
   const t = useTranslations("Reviews");
   const locale = useLocale();
   const isRTL = locale === "ar";
+  const animDir = isRTL ? "right" : "left";
+
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  const scrollerRef = useRef<HTMLDivElement | null>(null);
+  const itemRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  const scrollToIndex = (idx: number) => {
+    const next = ((idx % reviews.length) + reviews.length) % reviews.length;
+    const el = itemRefs.current[next];
+    if (!el) return;
+
+    setCurrentIndex(next);
+
+    el.scrollIntoView({
+      behavior: "smooth",
+      inline: "center",
+      block: "nearest",
+    });
+  };
+
   const handlePrevious = () => {
-    setCurrentIndex((prev) => (prev === 0 ? reviews.length - 1 : prev - 1));
+    const active = getActiveIndex();
+    scrollToIndex(active - 1);
   };
 
   const handleNext = () => {
-    setCurrentIndex((prev) => (prev === reviews.length - 1 ? 0 : prev + 1));
+    const active = getActiveIndex();
+    scrollToIndex(active + 1);
   };
 
-  const visibleReviews = useMemo(() => {
-    const maxVisible = 3;
-    const out: Review[] = [];
-    for (let i = 0; i < Math.min(maxVisible, reviews.length); i++) {
-      out.push(reviews[(currentIndex + i) % reviews.length]);
-    }
-    return out;
-  }, [currentIndex]);
+  // Update currentIndex while user scrolls (swipe/trackpad)
+  useEffect(() => {
+    const scroller = scrollerRef.current;
+    if (!scroller) return;
 
-  const animDir = isRTL ? "right" : "left";
+    let raf = 0;
+
+    const update = () => {
+      const items = itemRefs.current.filter(Boolean) as HTMLDivElement[];
+      if (!items.length) return;
+
+      const sRect = scroller.getBoundingClientRect();
+      const scrollerCenter = sRect.left + sRect.width / 2;
+
+      let bestIdx = 0;
+      let bestDist = Number.POSITIVE_INFINITY;
+
+      items.forEach((el, idx) => {
+        const r = el.getBoundingClientRect();
+        const itemCenter = r.left + r.width / 2;
+        const dist = Math.abs(itemCenter - scrollerCenter);
+
+        if (dist < bestDist) {
+          bestDist = dist;
+          bestIdx = idx;
+        }
+      });
+
+      setCurrentIndex(bestIdx);
+    };
+
+    const onScroll = () => {
+      cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(update);
+    };
+
+    scroller.addEventListener("scroll", onScroll, { passive: true });
+    // initial
+    update();
+
+    return () => {
+      cancelAnimationFrame(raf);
+      scroller.removeEventListener("scroll", onScroll);
+    };
+  }, [isRTL]);
+
+  const getActiveIndex = () => {
+    const scroller = scrollerRef.current;
+    const items = itemRefs.current.filter(Boolean) as HTMLDivElement[];
+    if (!scroller || !items.length) return 0;
+
+    const sRect = scroller.getBoundingClientRect();
+    const scrollerCenter = sRect.left + sRect.width / 2;
+
+    let bestIdx = 0;
+    let bestDist = Number.POSITIVE_INFINITY;
+
+    items.forEach((el, idx) => {
+      const r = el.getBoundingClientRect();
+      const itemCenter = r.left + r.width / 2;
+      const dist = Math.abs(itemCenter - scrollerCenter);
+
+      if (dist < bestDist) {
+        bestDist = dist;
+        bestIdx = idx;
+      }
+    });
+
+    return bestIdx;
+  };
 
   return (
     <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-10 py-10 lg:py-12 h-full">
@@ -96,6 +177,7 @@ export default function ReviewsContent() {
               className="w-8 h-8 md:w-12 md:h-12"
             />
           </button>
+
           <button type="button" onClick={handleNext} aria-label="Next review">
             <Image
               src={isRTL ? "/icons/left-arrow.svg" : "/icons/right-arrow.svg"}
@@ -108,28 +190,42 @@ export default function ReviewsContent() {
         </div>
       </header>
 
-      {/* Reviews row */}
-      <div className="mt-10 overflow-hidden">
-        <div className="flex gap-6 items-stretch rtl:flex-row-reverse">
-          {visibleReviews.map((review, idx) => (
-            <div
-              key={`${review.id}-${currentIndex}-${idx}`}
-              className={`basis-full sm:basis-1/2 lg:basis-1/3 flex
-                ${idx === 1 ? "hidden sm:flex" : ""}
-                ${idx === 2 ? "hidden lg:flex" : ""}
-              `}
-            >
-              <AnimateOnScroll direction={animDir}>
-                <ReviewCard
-                  name={review.name}
-                  message={review.message}
-                  avatarSrc={review.avatarSrc}
-                  rating={review.rating}
-                />
-              </AnimateOnScroll>
-            </div>
-          ))}
-        </div>
+      {/* Scrollable Reviews row */}
+      <div
+        ref={scrollerRef}
+        dir={isRTL ? "rtl" : "ltr"}
+        className="
+          mt-8
+          flex gap-6 items-stretch
+          overflow-x-auto overscroll-x-contain
+          snap-x snap-mandatory scroll-smooth
+          pb-2
+          [-ms-overflow-style:none] [scrollbar-width:none]
+          [&::-webkit-scrollbar]:hidden
+        "
+      >
+        {reviews.map((review, idx) => (
+          <div
+            key={review.id}
+            ref={(el) => {
+              itemRefs.current[idx] = el;
+            }}
+            className="
+              snap-center shrink-0 flex
+              w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]
+              min-h-[180px] sm:min-h-[240px]
+            "
+          >
+            <AnimateOnScroll direction={animDir} className="w-full flex">
+              <ReviewCard
+                name={review.name}
+                message={review.message}
+                avatarSrc={review.avatarSrc}
+                rating={review.rating}
+              />
+            </AnimateOnScroll>
+          </div>
+        ))}
       </div>
 
       <ReviewsResults />

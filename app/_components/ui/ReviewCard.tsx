@@ -54,7 +54,13 @@ const ReviewCard: React.FC<ReviewCardProps> = ({
       </div>
 
       {/* Message */}
-      <p className="mt-5 text-sm leading-relaxed text-[#6D6E70] sm:mt-6 sm:text-base md:text-lg flex-grow">
+      <p
+        className=" mt-5 text-sm leading-relaxed text-[#6D6E70]
+          sm:mt-6 sm:text-base md:text-md
+          flex-1
+          overflow-hidden
+          line-clamp-4 sm:line-clamp-5"
+      >
         {message}
       </p>
     </div>

@@ -22,8 +22,8 @@ export default function CTASection() {
             <h1
               className="
                 max-w-6xl font-bold
-                text-[clamp(2.25rem,4.5vw,4rem)]
-                leading-[1.15]
+                text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl
+                leading-[1.2]
                 tracking-tight sm:tracking-normal
               "
             >
