@@ -5,7 +5,7 @@ export default function BenefitsAndPayments() {
   return (
     <section
       id="benefits-and-payments"
-      className="relative w-full py-16 md:py-20"
+      className="relative w-full py-4 md:py-12"
     >
       <Image
         src="/bg-benefits-and-payments.png"

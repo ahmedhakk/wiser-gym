@@ -7,7 +7,7 @@ export default function LifestyleTransformation() {
     <AnimateOnScroll direction="up" delayMs={300}>
       <section
         id="lifestyle-transformation"
-        className="w-full relative min-h-[600px] lg:min-h-[700px] xl:min-h-[800px] overflow-hidden"
+        className="w-full relative min-h-[350px] lg:min-h-[700px] xl:min-h-[800px] overflow-hidden"
       >
         <Image
           src="/bg-lifestyle-transformation.png"

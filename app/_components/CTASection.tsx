@@ -6,7 +6,7 @@ export default function CTASection() {
   const t = useTranslations("CTASection");
 
   return (
-    <section className="relative w-full overflow-hidden h-[640px] md:h-[720px] lg:h-[760px]">
+    <section className="relative w-full overflow-hidden h-[460px] md:h-[620px] lg:h-[720px]">
       <Image
         src="/bg-cta.png"
         alt="CTA Background"
@@ -17,14 +17,14 @@ export default function CTASection() {
       />
 
       <div className="mx-auto h-full w-full max-w-7xl px-4 sm:px-6 lg:px-10">
-        <div className="flex h-full flex-col items-center justify-center text-center text-white pt-10 md:pt-0">
+        <div className="flex h-full flex-col items-center justify-center text-center text-white">
           <AnimateOnScroll direction="left" delayMs={300}>
             <h1
               className="
-                max-w-7xl font-bold
-                text-[clamp(2.25rem,4.5vw,4.25rem)]
-                leading-[1.08]
-                tracking-normal sm:tracking-wide
+                max-w-6xl font-bold
+                text-[clamp(2.25rem,4.5vw,4rem)]
+                leading-[1.15]
+                tracking-tight sm:tracking-normal
               "
             >
               {t("mainText")}
@@ -34,11 +34,11 @@ export default function CTASection() {
           <AnimateOnScroll direction="right" delayMs={300}>
             <p
               className="
-                mt-6 max-w-5xl font-semibold
-                text-[clamp(1rem,1.6vw,1.5rem)]
-                leading-[1.65]
-                text-white/90
-                tracking-normal sm:tracking-wider
+                mt-6 max-w-4xl font-medium
+                text-[clamp(1rem,1.6vw,1.4rem)]
+                leading-relaxed
+              text-white/90
+                tracking-normal
               "
             >
               {t("subText")}
@@ -49,10 +49,10 @@ export default function CTASection() {
             <button
               type="button"
               className="
-                mt-8 sm:mt-10 md:mt-12
+                mt-10 md:mt-12
                 bg-primary hover:bg-primary-hover
                 px-8 sm:px-10 md:px-12 py-3.5 sm:py-4
-                text-base sm:text-lg md:text-xl
+                text-sm sm:text-base lg:text-xl
                 font-bold
                 shadow-lg
                 transition-colors duration-300

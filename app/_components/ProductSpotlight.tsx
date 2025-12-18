@@ -3,7 +3,7 @@ import ProductSpotlightContent from "@/ui/ProductSpotlightContent";
 
 export default function ProductSpotlight() {
   return (
-    <section className="w-full bg-black relative overflow-hidden min-h-[600px] lg:min-h-[700px] xl:min-h-[800px]">
+    <section className="w-full bg-black relative overflow-hidden min-h-[350px] lg:min-h-[700px] xl:min-h-[800px]">
       <Image
         src="/product-spotlight.png"
         alt="product-spotlight"

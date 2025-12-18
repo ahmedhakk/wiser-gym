@@ -7,7 +7,7 @@ export default function BenefitsAndPaymentsContent() {
     <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-10">
       {/* Bebefits */}
       <AnimateOnScroll direction="right" delayMs={300}>
-        <BenefitsList className="mt-10 sm:mt-12 mb-10 sm:mb-12 lg:mb-16" />
+        <BenefitsList className="mt-6 sm:mt-12 mb-10 sm:mb-12 lg:mb-16" />
       </AnimateOnScroll>
 
       {/* Payments */}

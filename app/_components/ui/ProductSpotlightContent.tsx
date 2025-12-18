@@ -5,7 +5,7 @@ export default function ProductSpotlightContent() {
   const t = useTranslations();
 
   return (
-    <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-10 py-16 lg:py-20 min-h-[600px] lg:min-h-[700px] xl:min-h-[800px] flex flex-col justify-center ltr:items-end rtl:items-start relative z-10">
+    <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-10 py-16 lg:py-20 min-h-[350px] lg:min-h-[700px] xl:min-h-[800px] flex flex-col justify-center ltr:items-end rtl:items-start relative z-10">
       <div className="flex flex-col">
         <AnimateOnScroll direction="left" delayMs={300}>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black text-white mb-6 sm:mb-8 leading-[1.15] sm:leading-[1.12] capitalize">

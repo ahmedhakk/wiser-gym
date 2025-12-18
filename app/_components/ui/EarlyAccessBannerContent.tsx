@@ -26,7 +26,7 @@ export default function EarlyAccessBannerContent() {
           {/* Left side */}
           <AnimateOnScroll direction={leftAnim} delayMs={300}>
             <div>
-              <h2 className="text-xl font-semibold leading-snug sm:text-2xl md:text-3xl mb-8">
+              <h2 className="text-xl font-semibold leading-snug md:text-2xl lg:text-3xl mb-8">
                 {t("leftSidePerks.headline")}
               </h2>
 
@@ -47,7 +47,7 @@ export default function EarlyAccessBannerContent() {
           {/* Right side */}
           <AnimateOnScroll direction={rightAnim} delayMs={300}>
             <div>
-              <h2 className="text-xl font-semibold leading-snug sm:text-2xl md:text-3xl mb-8">
+              <h2 className="text-xl font-semibold leading-snug md:text-2xl lg:text-3xl mb-8">
                 {t("rightSidePerks.headline")}
               </h2>
 
@@ -71,7 +71,7 @@ export default function EarlyAccessBannerContent() {
           <AnimateOnScroll direction="up" delayMs={300}>
             <button
               type="button"
-              className="inline-flex items-center justify-center rounded bg-white px-6 py-3 text-center text-sm font-semibold tracking-wide text-gray-900 shadow-lg sm:px-10 sm:text-lg md:text-xl"
+              className="inline-flex items-center justify-center rounded bg-white px-6 py-3 text-center text-sm font-semibold tracking-wide text-gray-900 shadow-lg sm:px-10 sm:text-lg lg:text-xl"
             >
               {t("cta")}
             </button>

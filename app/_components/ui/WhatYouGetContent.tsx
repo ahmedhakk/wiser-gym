@@ -36,10 +36,10 @@ export default function WhatYouGetContent() {
                 alt={feature.text}
                 width={64}
                 height={64}
-                className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 flex-shrink-0"
+                className="w-10 h-10 sm:w-12 sm:h-12 flex-shrink-0"
               />
 
-              <p className="text-foreground text-base sm:text-lg md:text-xl lg:text-2xl leading-snug">
+              <p className="text-foreground text-base sm:text-lg md:text-xl leading-snug">
                 {feature.text}
               </p>
             </div>

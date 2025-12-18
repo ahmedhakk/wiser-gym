@@ -39,7 +39,7 @@ export default function FeaturesContent() {
         <span className="font-normal">{t("FeaturesOverview.headline")}</span>
       </h2>
 
-      <div className="flex flex-col lg:flex-row justify-between gap-8 lg:gap-12">
+      <div className="flex flex-col lg:flex-row justify-between gap-0 lg:gap-12">
         <AnimateOnScroll direction="right" delayMs={350}>
           <div>
             {featuresListLeft.map((feature, index) => (
