@@ -7,12 +7,12 @@ export default function WhatYouGetContent() {
 
   const featuresList = [
     { id: 1, text: t("list.item1"), iconSrc: "/icons/speech-icon.svg" },
-    { id: 2, text: t("list.item2"), iconSrc: "/icons/all-in-one-icon.svg" },
-    { id: 3, text: t("list.item3"), iconSrc: "/icons/family-icon.svg" },
-    { id: 4, text: t("list.item4"), iconSrc: "/icons/progress-icon.svg" },
-    { id: 5, text: t("list.item5"), iconSrc: "/icons/Time-Icon.svg" },
-    { id: 6, text: t("list.item6"), iconSrc: "/icons/eye-icon.svg" },
-    { id: 7, text: t("list.item7"), iconSrc: "/icons/fingerprint-icon.svg" },
+    { id: 2, text: t("list.item2"), iconSrc: "/icons/Time-Icon.svg" },
+    { id: 3, text: t("list.item3"), iconSrc: "/icons/all-in-one-icon.svg" },
+    { id: 4, text: t("list.item4"), iconSrc: "/icons/eye-icon.svg" },
+    { id: 5, text: t("list.item5"), iconSrc: "/icons/family-icon.svg" },
+    { id: 6, text: t("list.item6"), iconSrc: "/icons/fingerprint-icon.svg" },
+    { id: 7, text: t("list.item7"), iconSrc: "/icons/progress-icon.svg" },
   ];
 
   return (
@@ -39,7 +39,7 @@ export default function WhatYouGetContent() {
                 className="w-10 h-10 sm:w-12 sm:h-12 flex-shrink-0"
               />
 
-              <p className="text-foreground text-base sm:text-lg md:text-xl leading-snug">
+              <p className="text-foreground text-base sm:text-lg md:text-xl leading-snug capitalize">
                 {feature.text}
               </p>
             </div>

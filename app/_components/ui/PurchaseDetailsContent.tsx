@@ -27,64 +27,38 @@ export default function PurchaseDetailsContent({ isRTL }: { isRTL: boolean }) {
                 <div
                   key={purchase.id}
                   className="grid grid-cols-2 items-center"
+                  dir="ltr"
                 >
-                  {isRTL ? (
-                    <>
-                      {/* Text (LEFT in RTL) */}
-                      <div className="pr-24 2xl:pr-32 pl-12 2xl:pl-20 text-right">
-                        <AnimateOnScroll direction={animDir} delayMs={300}>
-                          <p className="text-xl 2xl:text-2xl max-w-[560px] text-white capitalize leading-[1.6] [max-height:820px]:text-lg">
-                            {purchase.text}
-                          </p>
-                        </AnimateOnScroll>
-                      </div>
+                  {/* Circle (LEFT / centered on the middle line) */}
+                  <div className="flex justify-end pr-6">
+                    <Image
+                      src={purchase.imageSrc}
+                      alt={purchase.text}
+                      width={280}
+                      height={280}
+                      className="
+                        w-44 h-44 2xl:w-56 2xl:h-56
+                        [max-height:820px]:w-36 [max-height:820px]:h-36
+                        object-cover rounded-full
+                        outline outline-6 2xl:outline-8 outline-white
+                        translate-x-1/2
+                      "
+                    />
+                  </div>
 
-                      {/* Circle (RIGHT on split) */}
-                      <div className="flex justify-start pl-6">
-                        <Image
-                          src={purchase.imageSrc}
-                          alt={purchase.text}
-                          width={280}
-                          height={280}
-                          className="
-                      w-44 h-44 2xl:w-56 2xl:h-56
-                      [max-height:820px]:w-36 [max-height:820px]:h-36
-                      object-cover rounded-full
-                      outline outline-6 2xl:outline-8 outline-white
-                      -translate-x-1/2
-                    "
-                        />
-                      </div>
-                    </>
-                  ) : (
-                    <>
-                      {/* Circle (LEFT on split) */}
-                      <div className="flex justify-end pr-6">
-                        <Image
-                          src={purchase.imageSrc}
-                          alt={purchase.text}
-                          width={280}
-                          height={280}
-                          className="
-                      w-44 h-44 2xl:w-56 2xl:h-56
-                      [max-height:820px]:w-36 [max-height:820px]:h-36
-                      object-cover rounded-full
-                      outline outline-6 2xl:outline-8 outline-white
-                      translate-x-1/2
-                    "
-                        />
-                      </div>
-
-                      {/* Text (RIGHT in LTR) */}
-                      <div className="pl-24 2xl:pl-32 pr-12 2xl:pr-20 text-left">
-                        <AnimateOnScroll direction={animDir} delayMs={300}>
-                          <p className="text-xl 2xl:text-2xl max-w-[560px] text-white capitalize leading-[1.6] [max-height:820px]:text-lg">
-                            {purchase.text}
-                          </p>
-                        </AnimateOnScroll>
-                      </div>
-                    </>
-                  )}
+                  {/* Text (RIGHT -> red background) */}
+                  <div className="pl-24 2xl:pl-32 pr-12 2xl:pr-20">
+                    <AnimateOnScroll direction={animDir} delayMs={300}>
+                      <p
+                        dir={isRTL ? "rtl" : "ltr"}
+                        className={`text-xl 2xl:text-2xl max-w-[560px] text-white capitalize leading-[1.6] [max-height:820px]:text-lg pt-4 border-t-2 border-white ${
+                          isRTL ? "text-right" : "text-left"
+                        }`}
+                      >
+                        {purchase.text}
+                      </p>
+                    </AnimateOnScroll>
+                  </div>
                 </div>
               ))}
             </div>
@@ -98,62 +72,36 @@ export default function PurchaseDetailsContent({ isRTL }: { isRTL: boolean }) {
       <div className="hidden md:flex xl:hidden min-h-[600px] lg:min-h-[700px] items-center">
         <div className="w-full flex flex-col gap-10 lg:gap-12">
           {purchaseList.map((purchase) => (
-            <div key={purchase.id} className="flex items-center">
-              {isRTL ? (
-                <>
-                  {/* Text on LEFT */}
-                  <div className="w-1/2 pr-24 lg:pr-28 pl-6 text-right flex justify-end">
-                    <AnimateOnScroll direction={animDir} delayMs={300}>
-                      <p className="text-base lg:text-lg text-white max-w-[460px] capitalize leading-[1.65]">
-                        {purchase.text}
-                      </p>
-                    </AnimateOnScroll>
-                  </div>
+            <div key={purchase.id} className="flex items-center" dir="ltr">
+              {/* Circle (LEFT / centered on the middle line) */}
+              <div className="w-1/2 flex justify-end pr-3 lg:pr-6">
+                <Image
+                  src={purchase.imageSrc}
+                  alt={purchase.text}
+                  width={220}
+                  height={220}
+                  className="
+                    w-32 h-32 lg:w-40 lg:h-40
+                    object-cover rounded-full
+                    outline outline-4 lg:outline-6 outline-white
+                    translate-x-1/2
+                  "
+                />
+              </div>
 
-                  {/* Circle on RIGHT (split) */}
-                  <div className="w-1/2 flex justify-start pl-3 lg:pl-6">
-                    <Image
-                      src={purchase.imageSrc}
-                      alt={purchase.text}
-                      width={220}
-                      height={220}
-                      className="
-                        w-32 h-32 lg:w-40 lg:h-40
-                        object-cover rounded-full
-                        outline outline-4 lg:outline-6 outline-white
-                        -translate-x-1/2
-                      "
-                    />
-                  </div>
-                </>
-              ) : (
-                <>
-                  {/* Circle on LEFT (split) */}
-                  <div className="w-1/2 flex justify-end pr-3 lg:pr-6">
-                    <Image
-                      src={purchase.imageSrc}
-                      alt={purchase.text}
-                      width={220}
-                      height={220}
-                      className="
-                        w-32 h-32 lg:w-40 lg:h-40
-                        object-cover rounded-full
-                        outline outline-4 lg:outline-6 outline-white
-                        translate-x-1/2
-                      "
-                    />
-                  </div>
-
-                  {/* Text on RIGHT */}
-                  <div className="w-1/2 pl-24 lg:pl-28 pr-6 text-left">
-                    <AnimateOnScroll direction={animDir} delayMs={300}>
-                      <p className="text-base lg:text-lg text-white max-w-[460px] capitalize leading-[1.65]">
-                        {purchase.text}
-                      </p>
-                    </AnimateOnScroll>
-                  </div>
-                </>
-              )}
+              {/* Text (RIGHT -> red background) */}
+              <div className="w-1/2 pl-24 lg:pl-28 pr-6">
+                <AnimateOnScroll direction={animDir} delayMs={300}>
+                  <p
+                    dir={isRTL ? "rtl" : "ltr"}
+                    className={`text-base lg:text-lg text-white max-w-[460px] capitalize leading-[1.65] pt-4 border-t-2 border-white ${
+                      isRTL ? "text-right" : "text-left"
+                    }`}
+                  >
+                    {purchase.text}
+                  </p>
+                </AnimateOnScroll>
+              </div>
             </div>
           ))}
         </div>

@@ -8,7 +8,7 @@
       "Benefits": "Benefits",
       "Testimonials": "Testimonials",
       "Pricing": "Pricing",
-      "Restore Btn": "Restore Your WiserGym Now"
+      "Reserve": "Reserve Your WiserGym Now"
     },
     "content": {
       "mainText": {
@@ -21,7 +21,7 @@
     }
   },
   "FeaturesOverview": {
-    "headline": "Packed with innovation",
+    "headline": "Packed with Innovation",
     "list": {
       "feature1": "Digital Weight & Smart resistance adjustment up to 100 kg",
       "feature2": "Smart Training",
@@ -45,7 +45,8 @@
       "advantage-2": "Get consistent results",
       "advantage-3": "Build discipline, confidence, and long-term health",
       "advantage-4": "Train privately anytime, with zero intimidation"
-    }
+    },
+    "order-now": "Order WiserGym Today – Limited Stock"
   },
   "GymPainPoints": {
     "content": {
@@ -98,14 +99,13 @@
   "WhatYouGet": {
     "headline": "What you’ll get with WiserGym",
     "list": {
-      "item1": "Personalized Guided Routine",
-      "item2": "All-in-one training system",
-      "item3": "Family-friendly setup",
-      "item4": "Real-time progress analytics",
-      "item5": "24/7 access on your schedule",
-      "item6": "2 Years Warranty",
-      "item7": "Safe, low-impact training",
-      "item8": "Private and judgment-free sessions"
+      "item1": "Personalized Guided Routines",
+      "item2": "24/7 access on your schedule",
+      "item3": "All-in-one training system",
+      "item4": "Safe, low-impact training",
+      "item5": "Family-friendly setup",
+      "item6": "Private and judgment-free sessions",
+      "item7": "Real-time progress analytics"
     }
   },
   "ProductOverview": {
@@ -127,6 +127,24 @@
   },
   "Reviews": {
     "headline": "What WiserGym Owners Are Saying",
+    "list": {
+      "review1": {
+        "text": "WiserGym completely changed how I train. I’ve lost 8kg in 3 months without stepping into a gym!",
+        "author": "Omer Ahmed"
+      },
+      "review2": {
+        "text": "My whole family uses it! It’s efficient, clean, and the AI guidance keeps me accountable.",
+        "author": "Reem Saad Abdullah"
+      },
+      "review3": {
+        "text": "I was skeptical at first, but the quality is unmatched. It feels like a full gym on my wall.",
+        "author": "Faisal Shaheen"
+      },
+      "review4": {
+        "text": "I was skeptical at first, but the quality is unmatched. It feels like a full gym on my wall.",
+        "author": "Nour Shaheen"
+      }
+    },
     "results": {
       "heading": "Hundreds of users are seeing results, saving time, and falling in love with fitness again.",
       "highlights": [
@@ -175,7 +193,7 @@
   },
   "CTASection": {
     "mainText": "Train the Wiser Way Smarter, Stronger, Home-Based",
-    "subText": "Designed to fit your home, your goals, and your time. No gym needed, no distractions, consistent results. Covered by a 2-year manufacturer warranty for peace of mind.",
+    "subText": "Designed to fit your home, your goals, and your time. No gym needed, no distractions, just consistent results. Covered by a 2-year manufacturer warranty for peace of mind.",
     "buttonText": "Buy Now & Bring the Gym To Your Home"
   },
   "Footer": {
@@ -206,6 +224,6 @@
       "title": "Legal",
       "links": ["Terms", "Privacy Policy", "Warranty"]
     },
-    "copyright": "© 2026 WiserGym. All rights reserved."
+    "copyright": "© 2026 WiserGym All rights reserved."
   }
 }

@@ -41,10 +41,10 @@ export default function LifestyleTransformationList({
             alt={BenefitItem.text}
             width={64}
             height={64}
-            className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 flex-shrink-0"
+            className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 lg:w-10 lg:h-10 flex-shrink-0"
           />
 
-          <p className="text-sm sm:text-base lg:text-md leading-[1.6]">
+          <p className="text-sm sm:text-base lg:text-xl leading-[1.6]">
             {BenefitItem.text}
           </p>
         </div>

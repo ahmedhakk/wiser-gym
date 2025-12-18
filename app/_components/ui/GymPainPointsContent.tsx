@@ -24,7 +24,7 @@ export default function GymPainPointsContent() {
     {
       id: 4,
       title: t("list.painPoint4"),
-      image: "/painPoint-4.png",
+      image: "/painPoint-4.jpg",
     },
   ];
 
@@ -48,7 +48,7 @@ export default function GymPainPointsContent() {
                 className="absolute inset-0 w-full h-full object-cover grayscale transition-transform duration-500 group-hover:scale-105"
               />
 
-              <div className="absolute bottom-0 left-0 w-full p-3 sm:p-4 md:p-6 bg-[#FF001AB2]">
+              <div className="absolute bottom-0 left-0 w-full p-3 sm:p-4 md:p-6 bg-[#FF001AB2] min-h-[60px] md:min-h-[100px] flex items-center">
                 <h3 className="text-white text-sm sm:text-base md:text-md font-medium leading-[1.3]">
                   {item.title}
                 </h3>

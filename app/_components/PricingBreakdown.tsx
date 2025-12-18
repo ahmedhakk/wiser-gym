@@ -65,7 +65,8 @@ const PricingBreakdown: React.FC = () => {
                       ltr:md:-right-28 rtl:md:-left-28
                       lg:ltr:-right-32 lg:rtl:-left-32
                       xl:ltr:-right-40 xl:rtl:-left-40
-                    "
+                      rtl:flex-row-reverse
+                      "
                   >
                     <Image
                       src="/icons/SAR.svg"
@@ -130,7 +131,7 @@ const PricingBreakdown: React.FC = () => {
                     </div>
 
                     <div className="relative text-center">
-                      <p className="flex items-baseline justify-center gap-2 text-red-600">
+                      <p className="flex items-baseline justify-center gap-2 rtl:flex-row-reverse text-red-600">
                         <Image
                           src="/icons/SAR.svg"
                           alt="SAR"
@@ -138,11 +139,13 @@ const PricingBreakdown: React.FC = () => {
                           height={28}
                           className="h-6 w-6 sm:h-20 sm:w-20 [filter:brightness(0)_saturate(100%)_invert(27%)_sepia(98%)_saturate(7495%)_hue-rotate(3deg)_brightness(95%)_contrast(118%)]"
                         />
-                        <span className="text-4xl font-bold sm:text-8xl">
-                          {t("rightColumn.pricePerDay")}
-                        </span>
-                        <span className="text-base font-bold sm:text-3xl">
-                          {t("rightColumn.perDay")}
+                        <span>
+                          <span className="text-4xl font-bold sm:text-8xl">
+                            {t("rightColumn.pricePerDay")}
+                          </span>
+                          <span className="text-base font-bold sm:text-3xl">
+                            {t("rightColumn.perDay")}
+                          </span>
                         </span>
                       </p>
 

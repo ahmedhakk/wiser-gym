@@ -9,7 +9,7 @@ export default function ProductSpotlight() {
         alt="product-spotlight"
         width={788}
         height={900}
-        className="hidden md:block absolute bottom-0 left-0 h-full w-[50%] max-w-[700px] object-cover z-0"
+        className="hidden md:block absolute bottom-0 left-0 h-full w-[60%] max-w-[760px] object-cover z-0"
         sizes="(max-width: 768px) 0vw, 50vw"
       />
 

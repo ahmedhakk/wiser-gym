@@ -1,11 +1,11 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
-import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import ReviewCard from "@/ui/ReviewCard";
 import ReviewsResults from "@/ui/ReviewsResults";
 import AnimateOnScroll from "./AnimateOnScroll";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 
 type Review = {
   id: number;
@@ -15,46 +15,42 @@ type Review = {
   avatarSrc: string;
 };
 
-const reviews: Review[] = [
-  {
-    id: 1,
-    name: "Omar Ahmed",
-    rating: 5,
-    message:
-      "WiserGym completely changed how I train. I’ve lost 8kg in 3 months without stepping into a gym!",
-    avatarSrc: "/avatars/omar.png",
-  },
-  {
-    id: 2,
-    name: "Reem Saad Abdullah",
-    rating: 5,
-    message:
-      "My whole family uses it! It’s efficient, clean, and the AI guidance keeps me accountable.",
-    avatarSrc: "/avatars/reem.png",
-  },
-  {
-    id: 3,
-    name: "Faisal Shaheen",
-    rating: 5,
-    message:
-      "I was skeptical at first, but the quality is unmatched. It feels like a full gym on my wall.",
-    avatarSrc: "/avatars/faisal.png",
-  },
-  {
-    id: 4,
-    name: "Faisal Shaheen",
-    rating: 5,
-    message:
-      "I was skeptical at first, but the quality is unmatched. It feels like a full gym on my wall.",
-    avatarSrc: "/avatars/faisal.png",
-  },
-];
-
 export default function ReviewsContent() {
   const t = useTranslations("Reviews");
   const locale = useLocale();
   const isRTL = locale === "ar";
   const animDir = isRTL ? "right" : "left";
+
+  const reviews: Review[] = [
+    {
+      id: 1,
+      name: t("list.review1.author"),
+      rating: 5,
+      message: t("list.review1.text"),
+      avatarSrc: "/avatars/omar.png",
+    },
+    {
+      id: 2,
+      name: t("list.review2.author"),
+      rating: 5,
+      message: t("list.review2.text"),
+      avatarSrc: "/avatars/reem.png",
+    },
+    {
+      id: 3,
+      name: t("list.review3.author"),
+      rating: 5,
+      message: t("list.review3.text"),
+      avatarSrc: "/avatars/faisal.png",
+    },
+    {
+      id: 4,
+      name: t("list.review4.author"),
+      rating: 5,
+      message: t("list.review4.text"),
+      avatarSrc: "/avatars/reem.png",
+    },
+  ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -168,24 +164,40 @@ export default function ReviewsContent() {
             type="button"
             onClick={handlePrevious}
             aria-label="Previous review"
+            className="
+              group inline-flex items-center justify-center
+              w-10 h-10 md:w-12 md:h-12
+              rounded-full border border-white/70
+              bg-transparent transition
+              hover:bg-white
+              focus:outline-none
+            "
           >
-            <Image
-              src={isRTL ? "/icons/right-arrow.svg" : "/icons/left-arrow.svg"}
-              alt=""
-              width={56}
-              height={56}
-              className="w-8 h-8 md:w-12 md:h-12"
-            />
+            {isRTL ? (
+              <ArrowRight className="w-5 h-5 md:w-6 md:h-6 text-white transition group-hover:text-black" />
+            ) : (
+              <ArrowLeft className="w-5 h-5 md:w-6 md:h-6 text-white transition group-hover:text-black" />
+            )}
           </button>
 
-          <button type="button" onClick={handleNext} aria-label="Next review">
-            <Image
-              src={isRTL ? "/icons/left-arrow.svg" : "/icons/right-arrow.svg"}
-              alt=""
-              width={56}
-              height={56}
-              className="w-8 h-8 md:w-12 md:h-12"
-            />
+          <button
+            type="button"
+            onClick={handleNext}
+            aria-label="Next review"
+            className="
+              group inline-flex items-center justify-center
+              w-10 h-10 md:w-12 md:h-12
+              rounded-full border border-white/70
+              bg-transparent transition
+              hover:bg-white
+              focus:outline-none
+            "
+          >
+            {isRTL ? (
+              <ArrowLeft className="w-5 h-5 md:w-6 md:h-6 text-white transition group-hover:text-black" />
+            ) : (
+              <ArrowRight className="w-5 h-5 md:w-6 md:h-6 text-white transition group-hover:text-black" />
+            )}
           </button>
         </div>
       </header>

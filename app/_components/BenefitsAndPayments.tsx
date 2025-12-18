@@ -11,7 +11,7 @@ export default function BenefitsAndPayments() {
         src="/bg-benefits-and-payments.png"
         alt="Benefits and Payments main background"
         fill
-        className="object-cover object-center -z-20"
+        className="object-fit object-center -z-20"
         priority
       />
       <div

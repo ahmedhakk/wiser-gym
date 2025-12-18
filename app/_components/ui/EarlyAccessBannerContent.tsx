@@ -32,12 +32,9 @@ export default function EarlyAccessBannerContent() {
 
               <ul className="mt-6 space-y-5 text-sm sm:text-base">
                 {leftPerks.map((perk) => (
-                  <li
-                    key={perk}
-                    className="flex items-center gap-3 rtl:flex-row-reverse rtl:justify-end"
-                  >
+                  <li key={perk} className="flex items-center gap-3">
                     <span className="h-4 w-4 sm:h-5 sm:w-5 rounded-sm border-2 border-white bg-white flex-shrink-0" />
-                    <span>{perk}</span>
+                    <span className="rtl:text-right">{perk}</span>
                   </li>
                 ))}
               </ul>
@@ -53,12 +50,9 @@ export default function EarlyAccessBannerContent() {
 
               <ul className="mt-6 space-y-5 text-sm sm:text-base">
                 {rightPerks.map((perk) => (
-                  <li
-                    key={perk}
-                    className="flex items-center gap-3 rtl:flex-row-reverse rtl:justify-end"
-                  >
+                  <li key={perk} className="flex items-center gap-3">
                     <span className="h-4 w-4 sm:h-5 sm:w-5 rounded-sm border-2 border-white bg-white flex-shrink-0" />
-                    <span>{perk}</span>
+                    <span className="rtl:text-right">{perk}</span>
                   </li>
                 ))}
               </ul>

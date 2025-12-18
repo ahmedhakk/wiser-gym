@@ -7,7 +7,7 @@ export default function KeyFeaturesContent() {
 
   return (
     <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-10 py-12 lg:py-16 relative">
-      <div className="flex flex-col lg:flex-row gap-12 lg:gap-10 lg:items-center">
+      <div className="flex flex-col lg:flex-row gap-12 md:gap-0 lg:items-center">
         <div className="w-full lg:w-[65%] text-white space-y-8 pr-0 lg:pr-12 relative z-10">
           {/* Header Section */}
           <div className="mb-10 sm:mb-12 lg:mb-14">
@@ -18,13 +18,19 @@ export default function KeyFeaturesContent() {
             </AnimateOnScroll>
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center lg:gap-0">
               <AnimateOnScroll direction="right" delayMs={300}>
-                <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold tracking-wide [text-shadow:0_4px_12px_rgba(0,0,0,0.15)]">
+                <h2
+                  className="
+                      text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[190px]
+                      font-bold tracking-wide
+                      [text-shadow:24px_24px_8px_#0000001F]
+                  "
+                >
                   {t("sub-headline.number")}
                 </h2>
               </AnimateOnScroll>
               <AnimateOnScroll direction="right" delayMs={300}>
-                <div className="bg-[#B90012] bg-opacity-60 backdrop-blur-sm px-4 sm:px-6 py-2 sm:py-3 inline-block self-start sm:self-center w-fit">
-                  <span className="text-lg sm:text-xl lg:text-2xl font-semibold tracking-wide">
+                <div className="bg-[#B90012] bg-opacity-60 backdrop-blur-sm px-3 py-2 sm:py-3 inline-block self-start sm:self-center w-fit">
+                  <span className="text-lg font-semibold tracking-wide">
                     {t("sub-headline.text")}
                   </span>
                 </div>
@@ -93,7 +99,7 @@ export default function KeyFeaturesContent() {
         {/* Right Image Area */}
         <div className="hidden lg:flex lg:w-[35%] relative justify-end z-0">
           <AnimateOnScroll direction="left" delayMs={300}>
-            <div className="relative h-[520px] xl:h-[620px] w-[360px] xl:w-[420px]">
+            <div className="relative h-[620px] xl:h-[720px] w-[460px] xl:w-[520px]">
               <Image
                 src="/key-features-main.png"
                 alt="Smart Gym Workout"

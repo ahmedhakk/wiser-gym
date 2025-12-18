@@ -31,6 +31,11 @@ export default function LifestyleTransformationContent() {
 
         <AnimateOnScroll direction="left" className="md:flex-1" delayMs={350}>
           <LifestyleTransformationList />
+          <div className="flex justify-end mt-12 md:mt-16">
+            <span className="text-foreground border border-foreground bg-black px-3 py-2 text-sm sm:text-base inline-block">
+              {t("LifestyleTransformation.order-now")}
+            </span>
+          </div>
         </AnimateOnScroll>
       </div>
     </div>
